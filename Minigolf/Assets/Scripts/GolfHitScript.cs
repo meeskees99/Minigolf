@@ -12,6 +12,7 @@ public class GolfHitScript : MonoBehaviour
     [SerializeField] private InputActionReference clubActionReference;
     private bool hasClub;
     public GameObject club;
+    public MeshRenderer clubMesh;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class GolfHitScript : MonoBehaviour
 
         if(hasClub)
         {
-            club.SetActive(true);
+            clubMesh.enabled = true;
             rightHandObject.SetActive(false);
             club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.6f);
             club.transform.rotation = rightHandRotation.transform.rotation;
@@ -33,7 +34,7 @@ public class GolfHitScript : MonoBehaviour
 
         if (hasClub == false)
         {
-            club.SetActive(false);
+            clubMesh.enabled = false; ;
             rightHandObject.SetActive(true);
         }
 

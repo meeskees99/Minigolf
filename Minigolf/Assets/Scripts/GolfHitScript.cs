@@ -7,9 +7,10 @@ using UnityEngine.InputSystem;
 
 public class GolfHitScript : MonoBehaviour
 {
-    private bool holdingStick;
     public GameObject rightHand;
     [SerializeField] private InputActionReference clubActionReference;
+    private bool hasClub;
+    public GameObject club;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,22 @@ public class GolfHitScript : MonoBehaviour
 
     private void DestroyClub(InputAction.CallbackContext obj)
     {
-        Destroy(gameObject);
-        print("hoi");
+        if(hasClub)
+        {
+            club.SetActive(false);
+            print("hoi");
+            hasClub = false;
+            //rightHand.SetActive(true);
+
+        }
+
+        if(hasClub == false)
+        {
+            club.SetActive(true);
+            hasClub = true;
+            club.transform.position = rightHand.transform.position - new Vector3(0, 0, 0.3f);
+            club.transform.rotation = rightHand.transform.rotation;
+            //rightHand.SetActive(false);
+        }
     }
 }

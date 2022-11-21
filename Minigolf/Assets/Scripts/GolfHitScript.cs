@@ -7,10 +7,12 @@ using UnityEngine.InputSystem;
 
 public class GolfHitScript : MonoBehaviour
 {
-    public GameObject rightHand;
+    public GameObject rightHandRotation;
+    public GameObject[] rightHandObjects;
     [SerializeField] private InputActionReference clubActionReference;
     private bool hasClub;
     public GameObject club;
+    public MeshRenderer clubMesh;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,20 +21,7 @@ public class GolfHitScript : MonoBehaviour
 
     void Update()
     {
-
-        if(hasClub)
-        {
-            club.SetActive(true);
-            club.transform.position = rightHand.transform.position - new Vector3(0, 0, 0.3f);
-            club.transform.rotation = rightHand.transform.rotation;
-            //rightHand.SetActive(false);
-            
-        }
-
-        if (hasClub == false)
-        {
-            club.SetActive(false);
-        }
+        clubHolding();
 
     }
 
@@ -41,13 +30,34 @@ public class GolfHitScript : MonoBehaviour
         if(hasClub)
         {
             hasClub = false;
-            //rightHand.SetActive(true);
-
         }
 
         else
         {
             hasClub = true;
+        }
+    }
+
+    void clubHolding()
+    {
+        if (hasClub)
+        {
+            clubMesh.enabled = true;
+            for (int i = 0; i < rightHandObjects.Length; i++)
+            {
+                rightHandObjects[i].SetActive(false);
+            }
+            club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.4f);
+            club.transform.rotation = rightHandRotation.transform.rotation;
+        }
+
+        if (hasClub == false)
+        {
+            clubMesh.enabled = false;
+            for (int i = 0; i < rightHandObjects.Length; i++)
+            {
+                rightHandObjects[i].SetActive(true);
+            }
         }
     }
 }

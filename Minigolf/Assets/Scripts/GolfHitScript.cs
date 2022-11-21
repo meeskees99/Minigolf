@@ -21,8 +21,26 @@ public class GolfHitScript : MonoBehaviour
 
     void Update()
     {
+        clubHolding();
 
+    }
+
+    private void DestroyClub(InputAction.CallbackContext obj)
+    {
         if(hasClub)
+        {
+            hasClub = false;
+        }
+
+        else
+        {
+            hasClub = true;
+        }
+    }
+
+    void clubHolding()
+    {
+        if (hasClub)
         {
             clubMesh.enabled = true;
             for (int i = 0; i < rightHandObjects.Length; i++)
@@ -31,8 +49,6 @@ public class GolfHitScript : MonoBehaviour
             }
             club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.4f);
             club.transform.rotation = rightHandRotation.transform.rotation;
-            //rightHand.SetActive(false);
-            
         }
 
         if (hasClub == false)
@@ -42,22 +58,6 @@ public class GolfHitScript : MonoBehaviour
             {
                 rightHandObjects[i].SetActive(true);
             }
-        }
-
-    }
-
-    private void DestroyClub(InputAction.CallbackContext obj)
-    {
-        if(hasClub)
-        {
-            hasClub = false;
-            //rightHand.SetActive(true);
-
-        }
-
-        else
-        {
-            hasClub = true;
         }
     }
 }

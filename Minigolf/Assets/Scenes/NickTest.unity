@@ -202,6 +202,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+--- !u!1 &620015172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 602639506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &620015174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620015172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c06ccbfe53f19343b973fa5c317222a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepSize: 4
+  hardMatFootstepsFX:
+  - {fileID: 2867477014483796881, guid: 3724184d265d186468e3f66ad1a86a15, type: 3}
+  - {fileID: 1857910695873308297, guid: ffaa93fe7c335ba44b789ed922bcd5db, type: 3}
+  - {fileID: 5925723859486389149, guid: 3a1254cd33c7d774abf5ac91e38a2458, type: 3}
+  playerOrgin: {fileID: 928409139}
+--- !u!1 &928409139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 602639506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049248274
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +629,7 @@ GameObject:
   - component: {fileID: 1448537960}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: HardFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

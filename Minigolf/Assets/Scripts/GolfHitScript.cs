@@ -19,43 +19,35 @@ public class GolfHitScript : MonoBehaviour
 
     void Update()
     {
-        /*
-        if(Input.GetKeyDown(KeyCode.E))
+
+        if(hasClub)
         {
-            transform.position = rightHand.transform.position - new Vector3(0, 0, 0.3f);
-            transform.rotation = rightHand.transform.rotation;
-            holdingStick = true;
-            rightHand.SetActive(false);
-            gameObject.SetActive(true);
+            club.SetActive(true);
+            club.transform.position = rightHand.transform.position - new Vector3(0, 0, 0.3f);
+            club.transform.rotation = rightHand.transform.rotation;
+            //rightHand.SetActive(false);
+            
         }
 
-        if(Input.GetKeyDown(KeyCode.E) && holdingStick)
+        if (hasClub == false)
         {
-            gameObject.SetActive(false);
-            rightHand.SetActive(true);
+            club.SetActive(false);
         }
-        */
-        
+
     }
 
     private void DestroyClub(InputAction.CallbackContext obj)
     {
         if(hasClub)
         {
-            club.SetActive(false);
-            print("hoi");
             hasClub = false;
             //rightHand.SetActive(true);
 
         }
 
-        if(hasClub == false)
+        else
         {
-            club.SetActive(true);
             hasClub = true;
-            club.transform.position = rightHand.transform.position - new Vector3(0, 0, 0.3f);
-            club.transform.rotation = rightHand.transform.rotation;
-            //rightHand.SetActive(false);
         }
     }
 }

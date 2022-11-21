@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 
 public class GolfHitScript : MonoBehaviour
 {
-    public GameObject rightHand;
+    public GameObject rightHandRotation;
+    public GameObject rightHandObject;
     [SerializeField] private InputActionReference clubActionReference;
     private bool hasClub;
     public GameObject club;
@@ -23,8 +24,9 @@ public class GolfHitScript : MonoBehaviour
         if(hasClub)
         {
             club.SetActive(true);
-            club.transform.position = rightHand.transform.position - new Vector3(0, 0, 0.3f);
-            club.transform.rotation = rightHand.transform.rotation;
+            rightHandObject.SetActive(false);
+            club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.6f);
+            club.transform.rotation = rightHandRotation.transform.rotation;
             //rightHand.SetActive(false);
             
         }
@@ -32,6 +34,7 @@ public class GolfHitScript : MonoBehaviour
         if (hasClub == false)
         {
             club.SetActive(false);
+            rightHandObject.SetActive(true);
         }
 
     }

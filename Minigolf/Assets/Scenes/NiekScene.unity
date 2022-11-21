@@ -163,7 +163,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 68cb4a223c9b2ff44a81c4e28d82c4df,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3287441
+      value: 1.2347441
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68cb4a223c9b2ff44a81c4e28d82c4df,
         type: 3}
@@ -569,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262865543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.459, y: 1.01, z: 0.225}
+  m_LocalPosition: {x: 0.459, y: 1.01, z: 1.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -639,10 +639,24 @@ MonoBehaviour:
   rightHandObjects:
   - {fileID: 1009427484}
   - {fileID: 888331010}
-  clubActionReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
+  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
     type: 3}
   club: {fileID: 1534000478}
   clubMesh: {fileID: 1534000479}
+  golfBall: {fileID: 1271327568}
+--- !u!65 &1534000485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534000478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.022502856, y: 0.06832647, z: 0.09860168}
+  m_Center: {x: 0, y: -0.75956035, z: 0.008445557}
 --- !u!1 &1642761671
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,12 +913,12 @@ PrefabInstance:
     - target: {fileID: 6632954857361076367, guid: 9178b15494fb35e4f857fd43ce215707,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.182
+      value: 2.049
       objectReference: {fileID: 0}
     - target: {fileID: 6632954857361076367, guid: 9178b15494fb35e4f857fd43ce215707,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.37
+      value: 2.762
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9178b15494fb35e4f857fd43ce215707, type: 3}
@@ -978,7 +992,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}

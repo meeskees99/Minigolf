@@ -13,6 +13,8 @@ public class GolfHitScript : MonoBehaviour
     private bool hasClub;
     public GameObject club;
     public MeshRenderer clubMesh;
+    public GameObject golfBall;
+    private Vector3 oldPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,11 @@ public class GolfHitScript : MonoBehaviour
     void Update()
     {
         clubHolding();
+    }
 
+    void FixedUpdate()
+    {
+        clubCollision();
     }
 
     private void DestroyClub(InputAction.CallbackContext obj)
@@ -58,6 +64,18 @@ public class GolfHitScript : MonoBehaviour
             {
                 rightHandObjects[i].SetActive(true);
             }
+        }
+    }
+  
+
+    void clubCollision()
+    {
+        float dist = Vector3.Distance(golfBall.transform.position, GetComponent<Collider>().transform.position);
+        float speed = Vector3.Distance(oldPosition, GetComponent<Collider>().transform.position);
+        oldPosition = GetComponent<Collider>().transform.position;
+        if (dist < 1)
+        {
+            golfBall.GetComponent<Rigidbody>().AddForce(GetComponent<Collider>().transform.right * speed);
         }
     }
 }

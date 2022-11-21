@@ -238,49 +238,12 @@ Transform:
   m_Father: {fileID: 1009427485}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: -180, z: -180}
---- !u!1 &838935862 stripped
+--- !u!1 &888331010 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1832546538569457247, guid: 9178b15494fb35e4f857fd43ce215707,
+  m_CorrespondingSourceObject: {fileID: 2591975828599768710, guid: 895f6f3c2d334633b5800312285058d2,
     type: 3}
-  m_PrefabInstance: {fileID: 2101937164}
+  m_PrefabInstance: {fileID: 1820183900}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &838935863 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 175217271854235530, guid: 9178b15494fb35e4f857fd43ce215707,
-    type: 3}
-  m_PrefabInstance: {fileID: 2101937164}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &838935866
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838935862}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.022502856, y: 0.04582262, z: 0.09860168}
-  m_Center: {x: 0, y: 0.02125907, z: 0.012349259}
---- !u!114 &838935867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838935862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c4bc307426cb2342acc753b018ec728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightHandRotation: {fileID: 274925425}
-  rightHandObject: {fileID: 1009427484}
-  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
-    type: 3}
-  club: {fileID: 838935862}
-  clubMesh: {fileID: 838935863}
 --- !u!1 &945519830
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +514,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1534000478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6289045846327896629, guid: 9178b15494fb35e4f857fd43ce215707,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101937164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1534000479 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5496592288382094304, guid: 9178b15494fb35e4f857fd43ce215707,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101937164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1534000482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534000478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4bc307426cb2342acc753b018ec728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHandRotation: {fileID: 274925425}
+  rightHandObjects:
+  - {fileID: 1009427484}
+  - {fileID: 888331010}
+  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+    type: 3}
+  club: {fileID: 1534000478}
+  clubMesh: {fileID: 1534000479}
 --- !u!1 &1642761671
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +710,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5388769285379289974, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_Name
@@ -793,6 +793,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Putter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632954857361076367, guid: 9178b15494fb35e4f857fd43ce215707,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632954857361076367, guid: 9178b15494fb35e4f857fd43ce215707,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.182
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9178b15494fb35e4f857fd43ce215707, type: 3}

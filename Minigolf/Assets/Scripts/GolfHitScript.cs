@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class GolfHitScript : MonoBehaviour
 {
     public GameObject rightHandRotation;
-    public GameObject rightHandObject;
+    public GameObject[] rightHandObjects;
     [SerializeField] private InputActionReference clubActionReference;
     private bool hasClub;
     public GameObject club;
@@ -25,8 +25,11 @@ public class GolfHitScript : MonoBehaviour
         if(hasClub)
         {
             clubMesh.enabled = true;
-            rightHandObject.SetActive(false);
-            club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.6f);
+            for (int i = 0; i < rightHandObjects.Length; i++)
+            {
+                rightHandObjects[i].SetActive(false);
+            }
+            club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.4f);
             club.transform.rotation = rightHandRotation.transform.rotation;
             //rightHand.SetActive(false);
             
@@ -34,8 +37,11 @@ public class GolfHitScript : MonoBehaviour
 
         if (hasClub == false)
         {
-            clubMesh.enabled = false; ;
-            rightHandObject.SetActive(true);
+            clubMesh.enabled = false;
+            for (int i = 0; i < rightHandObjects.Length; i++)
+            {
+                rightHandObjects[i].SetActive(true);
+            }
         }
 
     }

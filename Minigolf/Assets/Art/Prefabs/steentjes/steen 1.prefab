@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8203689856075239328}
   - component: {fileID: 5077395029284618245}
   - component: {fileID: 7030805840148362447}
+  - component: {fileID: 1708628251336619292}
   m_Layer: 0
   m_Name: steen 1
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 8832276683339289882}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.020433, y: -0.052, z: -2.8636613}
-  m_LocalScale: {x: 0.2639169, y: 0.2639169, z: 0.2639169}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &1708628251336619292
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8832276683339289882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35629004
+  m_Center: {x: 0.021947503, y: 0.2717631, z: 0.0037236959}

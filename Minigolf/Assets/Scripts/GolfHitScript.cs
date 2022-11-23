@@ -14,7 +14,10 @@ public class GolfHitScript : MonoBehaviour
     public GameObject club;
     public MeshRenderer clubMesh;
     public GameObject golfBall;
-    private Vector3 oldPosition;
+    private Vector3 oldClubPosition;
+    private Vector3 oldBallPosition;
+    public float ballSpeed;
+    public bool ballRolling;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,7 @@ public class GolfHitScript : MonoBehaviour
     void Update()
     {
         clubHolding();
+        ballHit();
     }
 
     void FixedUpdate()
@@ -71,11 +75,29 @@ public class GolfHitScript : MonoBehaviour
     void clubCollision()
     {
         float dist = Vector3.Distance(golfBall.transform.position, GetComponent<Collider>().transform.position);
-        float speed = Vector3.Distance(oldPosition, GetComponent<Collider>().transform.position);
-        oldPosition = GetComponent<Collider>().transform.position;
-        if (dist < 1)
+        float clubSpeed = Vector3.Distance(oldClubPosition, GetComponent<Collider>().transform.position);
+        oldClubPosition = GetComponent<Collider>().transform.position;
+        if (dist < 0.1f && ballRolling == false)
         {
-            golfBall.GetComponent<Rigidbody>().AddForce(GetComponent<Collider>().transform.right * speed);
+            //golfBall.GetComponent<Rigidbody>().AddForce(GetComponent<Collider>().transform.right * clubSpeed * Time.deltaTime);
+            var direction = (GetComponent<Collider>().transform.position - golfBall.transform.position).normalized;
+            print("hoi");
+            golfBall.transform.GetComponent<Rigidbody>().AddForce(direction * clubSpeed);
         }
+    }
+
+    void ballHit()
+    {
+        ballSpeed = Vector3.Distance(oldBallPosition, golfBall.transform.position);
+        if(ballSpeed < 0.001f) //hard code
+        {
+            ballRolling = false;
+        }
+
+        else
+        {
+            ballRolling = true;
+        }
+        oldBallPosition = golfBall.transform.position;
     }
 }

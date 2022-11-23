@@ -16,18 +16,23 @@ public class GolfHitScript : MonoBehaviour
     public GameObject golfBall;
     private Vector3 oldClubPosition;
     private Vector3 oldBallPosition;
+    public Vector3 checkpointGolfBall;
     public float ballSpeed;
     public bool ballRolling;
+    private bool ballHitBool;
     // Start is called before the first frame update
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
+        GameObject newBallPrefab = Instantiate(golfBall, new Vector3(0.3f, 1.6f, 1), Quaternion.identity);
+        //de spawn location is voor test, idk waar de bal aan het begin gaat spawnen
     }
 
     void Update()
     {
         clubHolding();
         ballHit();
+        ballRespawn();
     }
 
     void FixedUpdate()
@@ -79,7 +84,7 @@ public class GolfHitScript : MonoBehaviour
         oldClubPosition = GetComponent<Collider>().transform.position;
         if (dist < 0.1f && ballRolling == false)
         {
-            //golfBall.GetComponent<Rigidbody>().AddForce(GetComponent<Collider>().transform.right * clubSpeed * Time.deltaTime);
+            ballHitBool = true;
             var direction = (GetComponent<Collider>().transform.position - golfBall.transform.position).normalized;
             print("hoi");
             golfBall.transform.GetComponent<Rigidbody>().AddForce(direction * clubSpeed);
@@ -89,7 +94,7 @@ public class GolfHitScript : MonoBehaviour
     void ballHit()
     {
         ballSpeed = Vector3.Distance(oldBallPosition, golfBall.transform.position);
-        if(ballSpeed < 0.001f) //hard code
+        if(ballSpeed < 0.0001f) //hard code
         {
             ballRolling = false;
         }
@@ -99,5 +104,14 @@ public class GolfHitScript : MonoBehaviour
             ballRolling = true;
         }
         oldBallPosition = golfBall.transform.position;
+    }
+
+    void ballRespawn()
+    {
+        if(ballHitBool)
+        {
+            checkpointGolfBall = golfBall.transform.position;
+            ballHitBool = false;
+        }
     }
 }

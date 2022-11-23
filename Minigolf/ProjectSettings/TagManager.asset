@@ -6,6 +6,7 @@ TagManager:
   tags:
   - rightHand
   - HardFloor
+  - Boundary
   layers:
   - Default
   - TransparentFX

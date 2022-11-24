@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class BallCollision : MonoBehaviour
 {
-    private GameObject club;
     public GameObject ballRespawn;
-    private bool isGrounded;
+    public Vector3 checkpoint;
     // Start is called before the first frame update
     void Start()
     {
-        club = GameObject.Find("Putter");
+        
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        Vector3 checkpoint = transform.position;
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Boundary" && isGrounded == false)
+        if(collision.gameObject.tag == "Boundary")
         {
-            Vector3 checkpoint = club.GetComponent<GolfHitScript>().checkpointGolfBall;
             GameObject ball = Instantiate(ballRespawn, checkpoint, Quaternion.identity);
             Destroy(gameObject);
         }

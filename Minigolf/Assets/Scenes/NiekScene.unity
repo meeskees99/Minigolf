@@ -524,11 +524,11 @@ MonoBehaviour:
     type: 3}
   club: {fileID: 1534000478}
   clubMesh: {fileID: 1534000479}
-  golfBall: {fileID: 7356420522643242394, guid: 87eb2f263b74104499888b259d77a876,
+  golfBall: {fileID: 3605077765288941971, guid: dce4ec6f9fd857947acd27edb9e592e5,
     type: 3}
-  checkpointGolfBall: {x: 0, y: 0, z: 0}
   ballSpeed: 0
   ballRolling: 0
+  dist: 0
 --- !u!65 &1534000485
 BoxCollider:
   m_ObjectHideFlags: 0

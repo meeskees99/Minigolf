@@ -14,7 +14,7 @@ public class BallCollision : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        Vector3 checkpoint = transform.position;
+        checkpoint = transform.position;
     }
 
     void OnCollisionEnter(Collision collision)

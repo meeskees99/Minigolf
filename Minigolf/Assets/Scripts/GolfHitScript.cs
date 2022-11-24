@@ -11,9 +11,10 @@ public class GolfHitScript : MonoBehaviour
     public GameObject[] rightHandObjects;
     [SerializeField] private InputActionReference clubActionReference;
     private bool hasClub;
-    public GameObject club;
+    public GameObject clubCollider;
     public MeshRenderer clubMesh;
     public GameObject golfBall;
+    private GameObject instantiatedGolfBall;
     private Vector3 oldClubPosition;
     private Vector3 oldBallPosition;
     public float ballSpeed;
@@ -23,7 +24,7 @@ public class GolfHitScript : MonoBehaviour
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
-        GameObject newBallPrefab = Instantiate(golfBall, new Vector3(0.3f, 1.6f, 1), Quaternion.identity);
+        instantiatedGolfBall = Instantiate(golfBall, new Vector3(0.3f, 1.6f, 1), Quaternion.identity);
         //de spawn location is voor test, idk waar de bal aan het begin gaat spawnen
     }
 
@@ -60,8 +61,8 @@ public class GolfHitScript : MonoBehaviour
             {
                 rightHandObjects[i].SetActive(false);
             }
-            club.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.4f);
-            club.transform.rotation = rightHandRotation.transform.rotation;
+            gameObject.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.4f);
+            gameObject.transform.rotation = rightHandRotation.transform.rotation;
         }
 
         if (hasClub == false)
@@ -77,7 +78,7 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
-        dist = Vector3.Distance(golfBall.transform.position, GetComponent<Collider>().transform.position);
+        dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
         float clubSpeed = Vector3.Distance(oldClubPosition, GetComponent<Collider>().transform.position);
         oldClubPosition = GetComponent<Collider>().transform.position;
         if (dist < 0.1f && ballRolling == false)

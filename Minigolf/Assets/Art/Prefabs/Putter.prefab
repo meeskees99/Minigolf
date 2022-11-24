@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6632954857361076367}
   - component: {fileID: 7756085698896756522}
   - component: {fileID: 5496592288382094304}
+  - component: {fileID: 2301173421226182420}
+  - component: {fileID: 1800551951554169687}
   m_Layer: 0
   m_Name: Putter
   m_TagString: Untagged
@@ -83,3 +85,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2301173421226182420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289045846327896629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.022502856, y: 0.90176535, z: 0.09860168}
+  m_Center: {x: 0, y: -0.34284085, z: 0.008445557}
+--- !u!114 &1800551951554169687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289045846327896629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4bc307426cb2342acc753b018ec728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHandRotation: {fileID: 0}
+  rightHandObjects: []
+  clubActionReference: {fileID: 0}
+  club: {fileID: 0}
+  clubMesh: {fileID: 0}
+  golfBall: {fileID: 0}
+  ballSpeed: 0
+  ballRolling: 0
+  dist: 0

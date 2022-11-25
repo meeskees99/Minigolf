@@ -7,6 +7,8 @@ public class BallCollision : MonoBehaviour
     public GameObject ballRespawn;
     private Vector3 checkpoint;
     public GameObject club;
+    private RaycastHit hit;
+    public GameObject raycastCube;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,12 @@ public class BallCollision : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    void Update()
     {
-        checkpoint = transform.position;
+        bool ballRolling = club.GetComponent<GolfHitScript>().ballRolling;
+        if (Physics.Raycast(transform.position, -transform.up, out hit, 1) && ballRolling == false)
+        {
+            checkpoint = transform.position;
+        }
     }
 }

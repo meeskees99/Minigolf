@@ -14,12 +14,12 @@ public class GolfHitScript : MonoBehaviour
     public GameObject clubCollider;
     public MeshRenderer clubMesh;
     public GameObject golfBall;
-    private GameObject instantiatedGolfBall;
+    public GameObject instantiatedGolfBall;
     private Vector3 oldClubPosition;
     private Vector3 oldBallPosition;
     public float ballSpeed;
     public bool ballRolling;
-    public float dist;
+    public float clubForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +32,10 @@ public class GolfHitScript : MonoBehaviour
     {
         clubHolding();
         ballHit();
+        if(instantiatedGolfBall == null)
+        {
+            instantiatedGolfBall = Instantiate(golfBall, new Vector3(0.3f, 1.6f, 1), Quaternion.identity);
+        }
     }
 
     void FixedUpdate()
@@ -78,21 +82,22 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
-        dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-        float clubSpeed = Vector3.Distance(oldClubPosition, GetComponent<Collider>().transform.position);
-        oldClubPosition = GetComponent<Collider>().transform.position;
-        if (dist < 0.1f && ballRolling == false)
+        float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
+        float clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
+        oldClubPosition = clubCollider.transform.position;
+        if (dist < 0.07f && ballRolling == false)
         {
-            var direction = (GetComponent<Collider>().transform.position - golfBall.transform.position).normalized;
+            var direction = (clubCollider.transform.position - golfBall.transform.position).normalized;
             print("hoi");
-            golfBall.transform.GetComponent<Rigidbody>().AddForce(direction * clubSpeed);
+            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
         }
     }
 
     void ballHit()
     {
-        ballSpeed = Vector3.Distance(oldBallPosition, golfBall.transform.position);
-        if(ballSpeed < 0.0001f) //hard code
+        ballSpeed = Vector3.Distance(oldBallPosition, instantiatedGolfBall.transform.position);
+        oldBallPosition = instantiatedGolfBall.transform.position;
+        if (ballSpeed < 0.0001f) //hard code
         {
             ballRolling = false;
         }
@@ -101,6 +106,5 @@ public class GolfHitScript : MonoBehaviour
         {
             ballRolling = true;
         }
-        oldBallPosition = golfBall.transform.position;
     }
 }

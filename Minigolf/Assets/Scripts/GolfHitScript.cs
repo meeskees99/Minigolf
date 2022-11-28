@@ -31,11 +31,6 @@ public class GolfHitScript : MonoBehaviour
     void Update()
     {
         clubHolding();
-        ballHit();
-        if(instantiatedGolfBall == null)
-        {
-            instantiatedGolfBall = Instantiate(golfBall, new Vector3(0.3f, 1.6f, 1), Quaternion.identity);
-        }
     }
 
     void FixedUpdate()
@@ -90,21 +85,6 @@ public class GolfHitScript : MonoBehaviour
             var direction = (clubCollider.transform.position - golfBall.transform.position).normalized;
             print("hoi");
             instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
-        }
-    }
-
-    void ballHit()
-    {
-        ballSpeed = Vector3.Distance(oldBallPosition, instantiatedGolfBall.transform.position);
-        oldBallPosition = instantiatedGolfBall.transform.position;
-        if (ballSpeed < 0.0001f) //hard code
-        {
-            ballRolling = false;
-        }
-
-        else
-        {
-            ballRolling = true;
         }
     }
 }

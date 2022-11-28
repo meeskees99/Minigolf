@@ -9,7 +9,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] GameObject cam;
     [SerializeField] Vector3 heightOffset;
     Vector3 prevPos;
-    //RaycastHit floorCheck;
+    [Space(20)]
+    [Header("Compass")]
+    [SerializeField] GameObject compass;
+    [SerializeField] GameObject ball;
+    [SerializeField] bool lookingForBall;
 
     private void Start()
     {
@@ -22,13 +26,6 @@ public class PlayerScript : MonoBehaviour
         Vector3 currentPos = playerOrgin.transform.position;
         currentPos.y = prevPos.y;
         float distanceToPrevpos = Vector3.Distance(currentPos, prevPos);
-        //Physics.Raycast(playerOrgin.transform.position, -Vector3.up, out floorCheck, 4);
-        //if (distanceToPrevpos >= stepSize && floorCheck.transform.gameObject.CompareTag("HardFloor"))
-        //{
-        //    prevPos = currentPos;
-        //    int randomizer = Random.Range(0, hardMatFootstepsFX.Length);
-        //    Instantiate(hardMatFootstepsFX[randomizer], playerOrgin.transform.position, Quaternion.identity);
-        //}
         if (distanceToPrevpos >= stepSize)
         {
             prevPos = currentPos;
@@ -36,7 +33,16 @@ public class PlayerScript : MonoBehaviour
             Vector3 footstepRotation = cam.transform.rotation.eulerAngles;
             footstepRotation.z = 0;
             footstepRotation.x = 0;
-            GameObject footstep = Instantiate(hardMatFootstepsFX[randomizer], currentPos  - heightOffset, Quaternion.Euler(footstepRotation));
+            Instantiate(hardMatFootstepsFX[randomizer], currentPos  - heightOffset, Quaternion.Euler(footstepRotation));
+        }
+
+        //compass points to the ball
+        if (lookingForBall)
+        {
+            Vector3 targetDirection = compass.transform.position - ball.transform.position;
+            Vector3 compassRotation = Vector3.RotateTowards(compass.transform.forward, targetDirection, 180 * Time.deltaTime, 0.0f);
+            compass.transform.rotation = Quaternion.LookRotation(compassRotation);
+            compass.transform.rotation = Quaternion.Euler(0, compass.transform.eulerAngles.y, compass.transform.eulerAngles.z);
         }
     }
 }

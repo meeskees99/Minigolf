@@ -29,8 +29,7 @@ public class BallCollision : MonoBehaviour
 
     void Update()
     {
-        bool ballRolling = club.GetComponent<GolfHitScript>().ballRolling;
-        if (Physics.Raycast(transform.position, -transform.up, out hit, 1) && ballRolling == false)
+        if (Physics.Raycast(raycastCube.transform.position, -raycastCube.transform.up, out hit, 1) && ballRolling == false)
         {
             checkpoint = transform.position;
         }
@@ -39,9 +38,9 @@ public class BallCollision : MonoBehaviour
 
     void ballVoidSpeed()
     {
-        float ballSpeed = Vector3.Distance(oldBallPosition, transform.position);
+        var ballSpeed = GetComponent<Rigidbody>().velocity.magnitude;
         oldBallPosition = transform.position;
-        if (ballSpeed < 0.0001f) //hard code
+        if (ballSpeed == 0) //hard code
         {
             ballRolling = false;
         }

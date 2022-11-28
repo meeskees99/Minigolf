@@ -16,7 +16,6 @@ public class GolfHitScript : MonoBehaviour
     public GameObject golfBall;
     public GameObject instantiatedGolfBall;
     private Vector3 oldClubPosition;
-    private Vector3 oldBallPosition;
     public float ballSpeed;
     public bool ballRolling;
     public float clubForce;

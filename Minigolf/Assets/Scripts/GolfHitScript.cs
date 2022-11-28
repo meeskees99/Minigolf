@@ -16,7 +16,6 @@ public class GolfHitScript : MonoBehaviour
     public GameObject golfBall;
     public GameObject instantiatedGolfBall;
     private Vector3 oldClubPosition;
-    public float ballSpeed;
     public bool ballRolling;
     public float clubForce;
     // Start is called before the first frame update
@@ -30,13 +29,9 @@ public class GolfHitScript : MonoBehaviour
     void Update()
     {
         clubHolding();
-    }
-
-    void FixedUpdate()
-    {
         clubCollision();
+        ballRolling = instantiatedGolfBall.GetComponent<BallCollision>().ballRolling;
     }
-
     private void DestroyClub(InputAction.CallbackContext obj)
     {
         if(hasClub)
@@ -82,7 +77,6 @@ public class GolfHitScript : MonoBehaviour
         if (dist < 0.07f && ballRolling == false)
         {
             var direction = (clubCollider.transform.position - golfBall.transform.position).normalized;
-            print("hoi");
             instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
         }
     }

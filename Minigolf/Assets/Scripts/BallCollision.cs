@@ -38,6 +38,7 @@ public class BallCollision : MonoBehaviour
 
     void ballVoidSpeed()
     {
+        //check if ball rollin
         var ballSpeed = GetComponent<Rigidbody>().velocity.magnitude;
         oldBallPosition = transform.position;
         if (ballSpeed == 0) //hard code

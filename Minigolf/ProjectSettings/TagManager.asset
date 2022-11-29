@@ -9,6 +9,7 @@ TagManager:
   - Boundary
   - snow
   - map
+  - torch
   layers:
   - Default
   - TransparentFX

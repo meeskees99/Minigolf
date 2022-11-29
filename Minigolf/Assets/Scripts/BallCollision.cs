@@ -10,6 +10,7 @@ public class BallCollision : MonoBehaviour
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
+    public float minSpeedLimit;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -36,7 +37,7 @@ public class BallCollision : MonoBehaviour
 
     void ballVoidSpeed()
     {
-        //check if ball rollin
+        //check if ball rolling
         var ballSpeed = GetComponent<Rigidbody>().velocity.magnitude;
         if (ballSpeed == 0) //hard code
         {
@@ -48,9 +49,10 @@ public class BallCollision : MonoBehaviour
             ballRolling = true;
         }
 
-        if(ballSpeed < 0.1)
+        if(ballSpeed < minSpeedLimit)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
+        //minSpeedLimit altijd onder de 0.6, anders uh boem, grapje
     }
 }

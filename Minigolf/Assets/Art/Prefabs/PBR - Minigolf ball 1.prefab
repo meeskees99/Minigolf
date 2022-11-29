@@ -164,6 +164,7 @@ MonoBehaviour:
   club: {fileID: 0}
   raycastCube: {fileID: 4781356599048393082}
   ballRolling: 0
+  minSpeedLimit: 0.1
 --- !u!1 &4781356599048393082
 GameObject:
   m_ObjectHideFlags: 0

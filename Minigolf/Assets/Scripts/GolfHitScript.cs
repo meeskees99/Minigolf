@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class GolfHitScript : MonoBehaviour
 {
+    public GameObject playerBody;
     public GameObject rightHandRotation;
     public GameObject[] rightHandObjects;
     [SerializeField] private InputActionReference clubActionReference;
@@ -70,6 +71,7 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
+        /*
         float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
         float clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
         oldClubPosition = clubCollider.transform.position;
@@ -78,5 +80,21 @@ public class GolfHitScript : MonoBehaviour
             var direction = (clubCollider.transform.position - golfBall.transform.position).normalized;
             instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
         }
+        
+        eigen gemaakte collider die misschien nodig is
+        */
+
+        if(ballRolling)
+        {
+            clubCollider.SetActive(false);
+        }
+
+        else
+        {
+            clubCollider.SetActive(true);
+        }
+
+        //disable collision between player and golf stick
+        Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
     }
 }

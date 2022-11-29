@@ -10,8 +10,6 @@ public class BallCollision : MonoBehaviour
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
-    private Vector3 oldBallPosition;
-    // Start is called before the first frame update
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -40,7 +38,6 @@ public class BallCollision : MonoBehaviour
     {
         //check if ball rollin
         var ballSpeed = GetComponent<Rigidbody>().velocity.magnitude;
-        oldBallPosition = transform.position;
         if (ballSpeed == 0) //hard code
         {
             ballRolling = false;
@@ -49,6 +46,11 @@ public class BallCollision : MonoBehaviour
         else
         {
             ballRolling = true;
+        }
+
+        if(ballSpeed < 0.1)
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
 }

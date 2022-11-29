@@ -18,12 +18,11 @@ public class GolfHitScript : MonoBehaviour
     private Vector3 oldClubPosition;
     public bool ballRolling;
     public float clubForce;
-    // Start is called before the first frame update
+    public Transform spawn;
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
-        instantiatedGolfBall = Instantiate(golfBall, new Vector3(0.3f, 1.6f, 1), Quaternion.identity);
-        //de spawn location is voor test, idk waar de bal aan het begin gaat spawnen
+        instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
     }
 
     void Update()

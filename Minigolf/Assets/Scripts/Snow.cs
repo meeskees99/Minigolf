@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Snow : MonoBehaviour
 {
-    private void OnCollisionExit(Collision collision)
+    private float shrinkSpeed = 0.01f;
+    private void OnCollisionStay(Collision collision)
     {
-        if(collision.gameObject.tag == "map")
+        if(collision.gameObject.tag == "torch")
+        {
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y - shrinkSpeed, transform.localScale.z);
+        }
+    }
+
+    void Update()
+    {
+        if(transform.localScale.y < 0.5f)
         {
             Destroy(gameObject);
         }

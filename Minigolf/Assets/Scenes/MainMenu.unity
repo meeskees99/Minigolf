@@ -817,7 +817,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cfc1ea279d436a240bbe4c7f7fee3aa6, type: 2}
+  - {fileID: 2100000, guid: f31ee227428f2d240a00fbee0846b016, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   dimmedImages:
   - {fileID: 1741260831}
   - {fileID: 1970990466}
-  dimSpeed: 0.5
+  dimSpeed: 1
   loadTime: 3
 --- !u!1 &1841977976
 GameObject:

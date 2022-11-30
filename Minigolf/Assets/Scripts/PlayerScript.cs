@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
     {
         //plays a random footstep sound when you move more than the stepsize
         Vector3 currentPos = playerOrgin.transform.position;
-        currentPos.y = prevPos.y;
+        //currentPos.y = prevPos.y;
         float distanceToPrevpos = Vector3.Distance(currentPos, prevPos);
         if (distanceToPrevpos >= stepSize)
         {

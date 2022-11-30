@@ -12,6 +12,8 @@ TagManager:
   - torch
   - enviorment
   - club
+  - smallSnowBalls
+  - bigSnowBall
   layers:
   - Default
   - TransparentFX

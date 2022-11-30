@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04152946, g: 0.044150822, b: 0.10000873, a: 1}
+  m_IndirectSpecularColor: {r: 0.04437153, g: 0.044490322, b: 0.09597256, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -319,7 +319,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187026, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
@@ -6570,13 +6570,15 @@ Transform:
   - {fileID: 901333747}
   - {fileID: 2068724527}
   - {fileID: 580027538}
-  - {fileID: 1720216325}
   - {fileID: 1311244090}
   - {fileID: 1795241062}
   - {fileID: 1743406898}
   - {fileID: 420170320}
+  - {fileID: 1720216325}
   - {fileID: 2128736910}
+  - {fileID: 769839648}
   - {fileID: 417501362}
+  - {fileID: 719837971}
   - {fileID: 1890735781}
   - {fileID: 258323877}
   - {fileID: 1086709173}
@@ -6592,6 +6594,7 @@ Transform:
   - {fileID: 811603494}
   - {fileID: 2113692278}
   - {fileID: 1905385935}
+  - {fileID: 916013282}
   - {fileID: 660081333}
   - {fileID: 910255790}
   - {fileID: 1136964661}
@@ -6601,58 +6604,55 @@ Transform:
   - {fileID: 1688809508}
   - {fileID: 185466551}
   - {fileID: 1618671430}
+  - {fileID: 1473298059}
   - {fileID: 631945679}
-  - {fileID: 769839648}
   - {fileID: 8112086911872923555}
-  - {fileID: 719837971}
   - {fileID: 1502768698}
   - {fileID: 1996380097}
   - {fileID: 555360865}
-  - {fileID: 916013282}
   - {fileID: 525239275}
+  - {fileID: 650909423}
   - {fileID: 574391503}
-  - {fileID: 1473298059}
+  - {fileID: 1758096038}
   - {fileID: 245313407}
   - {fileID: 1340696585}
-  - {fileID: 616120985}
+  - {fileID: 1531897854}
   - {fileID: 7845229272802953563}
-  - {fileID: 787572953}
+  - {fileID: 1559516859}
   - {fileID: 124214496}
   - {fileID: 2126249963}
   - {fileID: 1647572577}
+  - {fileID: 853011373}
   - {fileID: 470561502}
-  - {fileID: 1758096038}
+  - {fileID: 1793632660}
   - {fileID: 1299606617}
+  - {fileID: 1958044675}
   - {fileID: 839575407}
-  - {fileID: 1846659719}
-  - {fileID: 1559516859}
+  - {fileID: 616120985}
   - {fileID: 1616590502122420452}
   - {fileID: 1057871048}
-  - {fileID: 1958044675}
   - {fileID: 2041628282}
-  - {fileID: 1246260042}
-  - {fileID: 1472674545}
   - {fileID: 2013111068}
-  - {fileID: 1462146964}
-  - {fileID: 1793632660}
-  - {fileID: 650909423}
-  - {fileID: 1531897854}
-  - {fileID: 883117903}
-  - {fileID: 982557309}
-  - {fileID: 504614466}
-  - {fileID: 271073580}
-  - {fileID: 669703723}
+  - {fileID: 1472674545}
   - {fileID: 2053964295}
-  - {fileID: 853011373}
-  - {fileID: 1805135958}
-  - {fileID: 795038529}
-  - {fileID: 266786003}
-  - {fileID: 357918591}
+  - {fileID: 1462146964}
+  - {fileID: 1846659719}
+  - {fileID: 787572953}
+  - {fileID: 883117903}
   - {fileID: 1930807785}
+  - {fileID: 504614466}
+  - {fileID: 1805135958}
+  - {fileID: 669703723}
+  - {fileID: 1246260042}
+  - {fileID: 795038529}
+  - {fileID: 271073580}
   - {fileID: 1733681703}
+  - {fileID: 266786003}
+  - {fileID: 982557309}
+  - {fileID: 357918591}
+  - {fileID: 1927466773}
   - {fileID: 1241187324}
   - {fileID: 362083751}
-  - {fileID: 1927466773}
   - {fileID: 367868997}
   - {fileID: 2016939076}
   m_Father: {fileID: 0}
@@ -7885,7 +7885,7 @@ MonoBehaviour:
   rightHandObjects:
   - {fileID: 2022003494}
   - {fileID: 2022003490}
-  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+  clubActionReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   clubCollider: {fileID: 237766930}
   clubMesh: {fileID: 1406640888}

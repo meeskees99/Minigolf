@@ -10084,6 +10084,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6598815579406187026, guid: 9f5a24a380916d14db9775daab4fe333,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_RootOrder
@@ -10349,7 +10354,7 @@ MonoBehaviour:
     type: 3}
   clubCollider: {fileID: 1211479943}
   clubMesh: {fileID: 5496592286993321964}
-  golfBall: {fileID: 1931603037311827372, guid: e9b6c8f6cf94605469fabde7c47f76d4,
+  golfBall: {fileID: 7565241609907295638, guid: d07764bea8f6bad4088757948ff82568,
     type: 3}
   instantiatedGolfBall: {fileID: 0}
   ballRolling: 0

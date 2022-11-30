@@ -8283,6 +8283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4bc307426cb2342acc753b018ec728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBody: {fileID: 2022003491}
   rightHandRotation: {fileID: 1549946797}
   rightHandObjects:
   - {fileID: 2022003494}
@@ -12082,6 +12083,12 @@ PrefabInstance:
 --- !u!1 &2022003490 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2591975828599768710, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2022003489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2022003491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2,
     type: 3}
   m_PrefabInstance: {fileID: 2022003489}
   m_PrefabAsset: {fileID: 0}

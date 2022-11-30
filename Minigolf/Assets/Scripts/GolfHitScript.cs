@@ -54,7 +54,7 @@ public class GolfHitScript : MonoBehaviour
             {
                 rightHandObjects[i].SetActive(false);
             }
-            gameObject.transform.position = rightHandRotation.transform.position - new Vector3(0, 0, 0.4f);
+            gameObject.transform.position = rightHandRotation.transform.position;
             gameObject.transform.rotation = rightHandRotation.transform.rotation;
         }
 

@@ -23,6 +23,7 @@ public class BallCollision : MonoBehaviour
             ballRespawn = Instantiate(ballRespawn, checkpoint, Quaternion.identity);
             club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
             Destroy(gameObject);
+            //respawn
         }
     }
 
@@ -32,14 +33,15 @@ public class BallCollision : MonoBehaviour
         {
             checkpoint = transform.position;
         }
+        //checkpoint
         ballVoidSpeed();
     }
 
     void ballVoidSpeed()
     {
         //check if ball rolling
-        var ballSpeed = GetComponent<Rigidbody>().velocity.magnitude;
-        if (ballSpeed == 0) //hard code
+        Vector3 ballSpeed = GetComponent<Rigidbody>().velocity;
+        if (ballSpeed == new Vector3(0, 0, 0)) //hard code
         {
             ballRolling = false;
         }
@@ -49,10 +51,12 @@ public class BallCollision : MonoBehaviour
             ballRolling = true;
         }
 
-        if(ballSpeed < minSpeedLimit)
-        {
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        }
-        //minSpeedLimit altijd onder de 0.6, anders uh boem, grapje
+        //if(ballSpeed < minSpeedLimit)
+        //{
+            //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        //}
+        //stopt de bal als het heel langzaam gaat
+
+
     }
 }

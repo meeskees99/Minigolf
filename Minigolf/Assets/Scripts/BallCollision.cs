@@ -10,10 +10,28 @@ public class BallCollision : MonoBehaviour
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
-    public float minSpeedLimit;
+    public Vector3 minSpeedLimitVector;
     void Start()
     {
         club = GameObject.Find("Putter");
+    }
+
+    void ballVoidSpeed()
+    {
+        //check if ball rolling
+        Vector3 ballSpeed = GetComponent<Rigidbody>().velocity;
+        if (ballSpeed == new Vector3(0, 0, 0)) //hard code
+        {
+            ballRolling = false;
+            GetComponent<Rigidbody>().drag = 0;
+        }
+
+        else
+        {
+            ballRolling = true;
+            GetComponent<Rigidbody>().drag += Time.deltaTime;
+        }
+        //stopt de bal als het heel langzaam gaat
     }
 
     void OnCollisionEnter(Collision collision)
@@ -35,28 +53,5 @@ public class BallCollision : MonoBehaviour
         }
         //checkpoint
         ballVoidSpeed();
-    }
-
-    void ballVoidSpeed()
-    {
-        //check if ball rolling
-        Vector3 ballSpeed = GetComponent<Rigidbody>().velocity;
-        if (ballSpeed == new Vector3(0, 0, 0)) //hard code
-        {
-            ballRolling = false;
-        }
-
-        else
-        {
-            ballRolling = true;
-        }
-
-        //if(ballSpeed < minSpeedLimit)
-        //{
-            //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        //}
-        //stopt de bal als het heel langzaam gaat
-
-
     }
 }

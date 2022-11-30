@@ -11,6 +11,7 @@ TagManager:
   - map
   - torch
   - enviorment
+  - club
   layers:
   - Default
   - TransparentFX

@@ -8,18 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e8466d1180b277d4b846de1b48886ff8
   - enabled: 0
     path: Assets/Scenes/Luuk krokettenscene.unity
     guid: ae60a4ef5ba04c2449dccc24d7e37e57
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/NathansScene.unity
     guid: 473f3da36e6079647b3631e4e45f4bf3
-  - enabled: 1
-    path: Assets/Scenes/test scene.unity
-    guid: d7648a612e934c84ea8d9792c133854d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ddccdb4ac1a1e9d4eabc76eec50dc415,
       type: 2}

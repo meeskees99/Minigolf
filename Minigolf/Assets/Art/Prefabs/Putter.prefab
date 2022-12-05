@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6289045846327896629
+--- !u!1 &4155143820932241038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,72 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6632954857361076367}
-  - component: {fileID: 7756085698896756522}
-  - component: {fileID: 5496592288382094304}
-  - component: {fileID: 2301173421226182420}
-  - component: {fileID: 1800551951554169687}
+  - component: {fileID: 4155143820932241024}
+  - component: {fileID: 4155143820932241025}
+  - component: {fileID: 4155143820932241027}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4155143820932241024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155143820932241038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.772, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7324810153727530378}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4155143820932241025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155143820932241038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30004993, y: 0.42433858, z: 1.0126805}
+  m_Center: {x: -0.009071231, y: -0.010936856, z: 0.08646846}
+--- !u!54 &4155143820932241027
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155143820932241038}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!1 &7993085226864267056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7324810153727530378}
+  - component: {fileID: 5911308298502904367}
+  - component: {fileID: 8497686503001255653}
+  - component: {fileID: 2402337522583219794}
   m_Layer: 0
   m_Name: Putter
   m_TagString: Untagged
@@ -20,36 +81,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6632954857361076367
+--- !u!4 &7324810153727530378
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289045846327896629}
+  m_GameObject: {fileID: 7993085226864267056}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09216621, y: 0.83263785, z: 0.08926189}
+  m_LocalPosition: {x: 0.09216621, y: 2.373, z: 2.325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4155143820932241024}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7756085698896756522
+--- !u!33 &5911308298502904367
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289045846327896629}
+  m_GameObject: {fileID: 7993085226864267056}
   m_Mesh: {fileID: 4493585093827132993, guid: 1fbe24f6fce2fc5408fab2b4d551fdbb, type: 3}
---- !u!23 &5496592288382094304
+--- !u!23 &8497686503001255653
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289045846327896629}
+  m_GameObject: {fileID: 7993085226864267056}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,37 +147,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2301173421226182420
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289045846327896629}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.022502856, y: 0.90176535, z: 0.09860168}
-  m_Center: {x: 0, y: -0.34284085, z: 0.008445557}
---- !u!114 &1800551951554169687
+--- !u!114 &2402337522583219794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289045846327896629}
+  m_GameObject: {fileID: 7993085226864267056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c4bc307426cb2342acc753b018ec728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBody: {fileID: 0}
   rightHandRotation: {fileID: 0}
-  rightHandObjects: []
-  clubActionReference: {fileID: 0}
-  club: {fileID: 0}
-  clubMesh: {fileID: 0}
-  golfBall: {fileID: 0}
-  ballSpeed: 0
+  rightHandObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+    type: 3}
+  clubCollider: {fileID: 4155143820932241038}
+  clubMesh: {fileID: 8497686503001255653}
+  golfBall: {fileID: 7565241609907295638, guid: d07764bea8f6bad4088757948ff82568,
+    type: 3}
+  instantiatedGolfBall: {fileID: 0}
   ballRolling: 0
-  dist: 0
+  clubForce: 100
+  spawn: {fileID: 0}

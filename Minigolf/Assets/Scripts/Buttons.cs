@@ -15,6 +15,12 @@ public class Buttons : MonoBehaviour
         StartCoroutine(Transition(sceneName));
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("The application would have been closed, but that doesn't work in the editor!");
+    }
+
     IEnumerator Transition(string sceneName)
     {
         foreach (Image dimmedImage in dimmedImages)

@@ -6,11 +6,11 @@ public class BallCollision : MonoBehaviour
 {
     public GameObject ballRespawn;
     private Vector3 checkpoint;
-    public GameObject club;
+    private GameObject club;
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
-    public Vector3 minSpeedLimitVector;
+    public float mushroomBounceSpeed;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -42,6 +42,13 @@ public class BallCollision : MonoBehaviour
             club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
             Destroy(gameObject);
             //respawn
+        }
+
+        if(collision.gameObject.tag == "Mushroom")
+        {
+            var direction = (transform.position - collision.transform.position).normalized;
+            transform.GetComponent<Rigidbody>().AddForce(direction * mushroomBounceSpeed);
+            transform.GetComponent<Rigidbody>().AddForce(raycastCube.transform.up * mushroomBounceSpeed);
         }
     }
 

@@ -931,6 +931,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7019348694990911110, guid: d07764bea8f6bad4088757948ff82568,
+        type: 3}
+      propertyPath: mushroomBounceSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7185198012169654060, guid: d07764bea8f6bad4088757948ff82568,
         type: 3}
       propertyPath: m_RootOrder
@@ -10217,7 +10222,7 @@ PrefabInstance:
     - target: {fileID: 1650941598458497050, guid: 08a7264665b1bd94a934759fdabce77d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.629
+      value: 0.676
       objectReference: {fileID: 0}
     - target: {fileID: 1650941598458497050, guid: 08a7264665b1bd94a934759fdabce77d,
         type: 3}
@@ -10258,6 +10263,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650941598458497051, guid: 08a7264665b1bd94a934759fdabce77d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.3607968
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650941598458497051, guid: 08a7264665b1bd94a934759fdabce77d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.08351606
       objectReference: {fileID: 0}
     - target: {fileID: 1650941598458497053, guid: 08a7264665b1bd94a934759fdabce77d,
         type: 3}
@@ -10387,6 +10402,11 @@ PrefabInstance:
       propertyPath: rightHandObjects.Array.data[1]
       value: 
       objectReference: {fileID: 888331010}
+    - target: {fileID: 4155143820932241025, guid: 9178b15494fb35e4f857fd43ce215707,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7324810153727530378, guid: 9178b15494fb35e4f857fd43ce215707,
         type: 3}
       propertyPath: m_RootOrder
@@ -10456,7 +10476,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7952345783282517163}
-  m_Material: {fileID: 13400000, guid: cc021c93a7d7f224084db9684e3c623e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.09095192
@@ -10492,14 +10512,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7952345783282517163}
-  m_LocalRotation: {x: -0, y: -0, z: 0.29985642, w: 0.9539844}
-  m_LocalPosition: {x: 0.88, y: 1.446, z: 0.969}
+  m_LocalRotation: {x: 0.061004844, y: 0.19408527, z: 0.2935855, w: 0.93403256}
+  m_LocalPosition: {x: 0.8761084, y: 1.358, z: 1.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 34.898}
+  m_LocalEulerAnglesHint: {x: 0, y: 23.477, z: 34.898}
 --- !u!1 &7952345783282517163
 GameObject:
   m_ObjectHideFlags: 0
@@ -10515,7 +10535,7 @@ GameObject:
   - component: {fileID: 4329214075978184491}
   m_Layer: 0
   m_Name: mushroom_2 1
-  m_TagString: Untagged
+  m_TagString: Mushroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

@@ -1290,7 +1290,7 @@ MonoBehaviour:
     type: 3}
   instantiatedGolfBall: {fileID: 0}
   ballRolling: 0
-  clubForce: 100
+  clubForce: 400
   spawn: {fileID: 1379999513}
 --- !u!23 &251746783
 MeshRenderer:

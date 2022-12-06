@@ -24,14 +24,20 @@ public class GolfHitScript : MonoBehaviour
     {
         clubActionReference.action.performed += DestroyClub;
         instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
+        //disable collision between player and golf stick
+        Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
     }
 
     void Update()
     {
         clubHolding();
-        clubCollision();
         ballRolling = instantiatedGolfBall.GetComponent<BallCollision>().ballRolling;
     }
+    void FixedUpdate()
+    {
+        clubCollision();
+    }
+
     private void DestroyClub(InputAction.CallbackContext obj)
     {
         if(hasClub)
@@ -71,19 +77,16 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
-        /*
-        float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
         float clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
         oldClubPosition = clubCollider.transform.position;
-        if (dist < 0.07f && ballRolling == false)
+        float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
+        if (dist < 0.04f && ballRolling == false)
         {
             var direction = (clubCollider.transform.position - golfBall.transform.position).normalized;
             instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
         }
         
-        eigen gemaakte collider die misschien nodig is
-        */
-
+        //eigen gemaakte collider die misschien nodig is
         if(ballRolling)
         {
             clubCollider.SetActive(false);
@@ -93,8 +96,5 @@ public class GolfHitScript : MonoBehaviour
         {
             clubCollider.SetActive(true);
         }
-
-        //disable collision between player and golf stick
-        Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
     }
 }

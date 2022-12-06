@@ -82,7 +82,7 @@ public class GolfHitScript : MonoBehaviour
         float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
         if (dist < 0.04f && ballRolling == false)
         {
-            var direction = (clubCollider.transform.position - golfBall.transform.position).normalized;
+            var direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
             instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
         }
         

@@ -45,6 +45,14 @@ public class BallCollision : MonoBehaviour
         }
     }
 
+    void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.tag == "flag")
+        {
+            //bal kan nu uit het gat gepakt worden
+        }
+    }
+
     void Update()
     {
         if (Physics.Raycast(raycastCube.transform.position, -raycastCube.transform.up, out hit, 1) && ballRolling == false)

@@ -47,7 +47,6 @@ public class BallCollision : MonoBehaviour
         if(collision.gameObject.tag == "Mushroom")
         {
             var direction = (transform.position - collision.transform.position).normalized;
-            transform.GetComponent<Rigidbody>().AddForce(direction * mushroomBounceSpeed);
             transform.GetComponent<Rigidbody>().AddForce(raycastCube.transform.up * mushroomBounceSpeed);
         }
     }

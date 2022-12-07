@@ -85,7 +85,7 @@ public class GolfHitScript : MonoBehaviour
         if (dist < 0.1f && ballRolling == false && clubSpeed > 4 || dist < 0.03f && ballRolling == false)
         {
             var direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
-            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed * 3);
+            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
         }
         //eigen gemaakte collider die misschien nodig is
         if (ballRolling)

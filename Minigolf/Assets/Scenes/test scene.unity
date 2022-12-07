@@ -1282,7 +1282,7 @@ MonoBehaviour:
   rightHandObjects:
   - {fileID: 1332098682}
   - {fileID: 1332098681}
-  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+  clubActionReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   clubCollider: {fileID: 695919302}
   clubMesh: {fileID: 251746783}
@@ -1290,7 +1290,7 @@ MonoBehaviour:
     type: 3}
   instantiatedGolfBall: {fileID: 0}
   ballRolling: 0
-  clubForce: 400
+  clubForce: 1200
   spawn: {fileID: 1379999513}
   clubSpeed: 0
 --- !u!23 &251746783
@@ -5699,7 +5699,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}

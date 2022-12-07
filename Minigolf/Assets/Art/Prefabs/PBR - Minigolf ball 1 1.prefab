@@ -111,10 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballRespawn: {fileID: 7565241609907295638}
-  club: {fileID: 0}
   raycastCube: {fileID: 3488468840066709824}
   ballRolling: 0
-  mushroomBounceSpeed: 10
+  mushroomBounceSpeed: 40
 --- !u!23 &808646429063288539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565241609907295638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 

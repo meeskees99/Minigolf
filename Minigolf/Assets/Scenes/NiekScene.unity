@@ -931,10 +931,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9012082189977529573, guid: d07764bea8f6bad4088757948ff82568,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7019348694990911110, guid: d07764bea8f6bad4088757948ff82568,
         type: 3}
       propertyPath: mushroomBounceSpeed
-      value: 10
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7185198012169654060, guid: d07764bea8f6bad4088757948ff82568,
         type: 3}
@@ -10816,6 +10821,11 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 1949835402}
+    - target: {fileID: 6544755514636011841, guid: 9178b15494fb35e4f857fd43ce215707,
+        type: 3}
+      propertyPath: clubForce
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6544755514636011841, guid: 9178b15494fb35e4f857fd43ce215707,
         type: 3}
       propertyPath: playerBody

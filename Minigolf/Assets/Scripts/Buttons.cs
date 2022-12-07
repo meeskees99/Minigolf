@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Buttons : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class Buttons : MonoBehaviour
     [SerializeField] Image[] dimmedImages;
     [SerializeField] float dimSpeed;
     [SerializeField] float loadTime;
+    [Space(20)]
+    [Header("Options")]
+    static public bool walking = true;
+    static public bool snapturning = false;
+    static public int brightness = 100;
+
 
     public void GoToScene(string sceneName)
     {
@@ -21,11 +28,54 @@ public class Buttons : MonoBehaviour
         Debug.Log("The application would have been closed, but that doesn't work in the editor!");
     }
 
+    public void ToggleWalkTp(TextMeshProUGUI buttonText)
+    {
+        walking = !walking;
+        if (walking)
+        {
+            buttonText.text = "  < Walk >";
+        }
+        else
+        {
+            buttonText.text = "  < Teleport >";
+        }
+    }
+
+    public void ToggleSnapturning(TextMeshProUGUI buttonText)
+    {
+        snapturning = !snapturning;
+        if (snapturning)
+        {
+            buttonText.text = "  < Snapturning: On >";
+        }
+        else
+        {
+            buttonText.text = "  < Snapturning: Off >"; 
+        }
+    }
+
+    public void ChangeBrightnessUp(TextMeshProUGUI buttonText)
+    {
+        if (brightness <= 90)
+        {
+            brightness += 10;
+        }
+        buttonText.text = $"  < Brightness >       {brightness}";
+    }
+
+    public void ChangeBrightnessDown(TextMeshProUGUI buttonText)
+    {
+        if (brightness >= 20)
+        {
+            brightness -= 10;
+        }
+        buttonText.text = $"  < Brightness >       {brightness}";
+    }
+
     IEnumerator Transition(string sceneName)
     {
         foreach (Image dimmedImage in dimmedImages)
         {
-
             var tempColor = dimmedImage.color;
             tempColor.a += dimSpeed * Time.deltaTime;
             dimmedImage.color = tempColor;

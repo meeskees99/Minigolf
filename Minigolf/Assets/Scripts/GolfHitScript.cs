@@ -27,6 +27,7 @@ public class GolfHitScript : MonoBehaviour
         instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
         //disable collision between player and golf stick
         Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
+        Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), instantiatedGolfBall.GetComponent<SphereCollider>());
     }
 
     void Update()
@@ -81,18 +82,11 @@ public class GolfHitScript : MonoBehaviour
         clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
         oldClubPosition = clubCollider.transform.position;
         float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-        if (dist < 0.1f && ballRolling == false && clubSpeed > 4)
+        if (dist < 0.1f && ballRolling == false && clubSpeed > 4 || dist < 0.03f && ballRolling == false)
         {
             var direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
             instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed * 3);
         }
-
-        if (dist < 0.03f && ballRolling == false)
-        {
-            var direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
-            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed * 3);
-        }
-
         //eigen gemaakte collider die misschien nodig is
         if (ballRolling)
         {

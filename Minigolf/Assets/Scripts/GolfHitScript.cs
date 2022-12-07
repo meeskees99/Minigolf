@@ -20,6 +20,7 @@ public class GolfHitScript : MonoBehaviour
     public bool ballRolling;
     public float clubForce;
     public Transform spawn;
+    public float clubSpeed;
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
@@ -77,17 +78,23 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
-        float clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
+        clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
         oldClubPosition = clubCollider.transform.position;
         float dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-        if (dist < 0.04f && ballRolling == false)
+        if (dist < 0.1f && ballRolling == false && clubSpeed > 4)
         {
             var direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
-            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
+            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed * 3);
         }
-        
+
+        if (dist < 0.03f && ballRolling == false)
+        {
+            var direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
+            instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed * 3);
+        }
+
         //eigen gemaakte collider die misschien nodig is
-        if(ballRolling)
+        if (ballRolling)
         {
             clubCollider.SetActive(false);
         }

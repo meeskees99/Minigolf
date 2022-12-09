@@ -15,6 +15,7 @@ public class Buttons : MonoBehaviour
     static public bool walking = true;
     static public bool snapturning = false;
     static public int brightness = 100;
+    static public float volume = 1;
 
 
     public void GoToScene(string sceneName)
@@ -70,6 +71,24 @@ public class Buttons : MonoBehaviour
             brightness -= 10;
         }
         buttonText.text = $"  < Brightness >       {brightness}";
+    }
+
+    public void ChangeVolumeUp(TextMeshProUGUI buttonText)
+    {
+        if (volume <= .9f)
+        {
+            volume += .1f;
+        }
+        buttonText.text = $"  < Sound Volume >    {volume * 100}";
+    }
+
+    public void ChangeVolumeDown(TextMeshProUGUI buttonText)
+    {
+        if (volume >= .1f)
+        {
+           volume -= .1f;
+        }
+        buttonText.text = $"  < Sound Volume >    {volume * 100}";
     }
 
     IEnumerator Transition(string sceneName)

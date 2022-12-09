@@ -24,12 +24,14 @@ public class BallCollision : MonoBehaviour
         {
             ballRolling = false;
             GetComponent<Rigidbody>().drag = 0;
+            GetComponent<Rigidbody>().angularDrag = 0;
         }
 
         else
         {
             ballRolling = true;
             GetComponent<Rigidbody>().drag += Time.deltaTime;
+            GetComponent<Rigidbody>().angularDrag += Time.deltaTime;
         }
         //stopt de bal als het heel langzaam gaat
     }

@@ -8,9 +8,10 @@ public class SnowBall : MonoBehaviour
     {
         if(gameObject.tag == "bigSnowBall")
         {
-            var snowBallSpeed = GetComponent<Rigidbody>().velocity.magnitude / 10000;
+            var snowBallSpeed = GetComponent<Rigidbody>().velocity.magnitude / 1000;
             Mathf.Clamp(transform.localScale.x, 0, 1.4f); 
-            transform.localScale = transform.localScale + new Vector3(snowBallSpeed, snowBallSpeed, snowBallSpeed);
+            transform.localScale += new Vector3(snowBallSpeed, snowBallSpeed, snowBallSpeed);
+            GetComponent<Rigidbody>().mass += snowBallSpeed;
         }
     }
 

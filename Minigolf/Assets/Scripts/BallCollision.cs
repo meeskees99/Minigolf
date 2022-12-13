@@ -56,6 +56,7 @@ public class BallCollision : MonoBehaviour
         if (collision.gameObject.tag == "flag")
         {
             Instantiate(grabBall, transform.position, Quaternion.identity);
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall = grabBall;
             Destroy(gameObject);
             //spawn een bal die de speler wel op kan pakken op de positie van de bal
         }

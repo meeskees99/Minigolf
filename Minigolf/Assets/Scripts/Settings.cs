@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using Unity.XR.CoreUtils;
 
 public class Settings : MonoBehaviour
 {
     [SerializeField] Image dimmedBrightnessImage;
-    [SerializeField] AudioMixerGroup globalVolume;
+    [SerializeField] Transform camOffset;
 
-    private void Update()
+    private void Start()
+    {
+        UpdateSettings();
+    }
+
+    public void UpdateSettings()
     {
         //brightness
         var tempColor = dimmedBrightnessImage.color;
@@ -18,6 +24,9 @@ public class Settings : MonoBehaviour
         dimmedBrightnessImage.color = tempColor;
 
         //volume
-        AudioListener.volume = Buttons.brightness;
+        AudioListener.volume = Buttons.volume;
+
+        //player height
+        camOffset.position = new Vector3(camOffset.position.x, Buttons.playerHeightOffset + 1.2f, camOffset.position.z);
     }
 }

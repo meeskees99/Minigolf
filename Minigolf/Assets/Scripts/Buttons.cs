@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Buttons : MonoBehaviour
 {
@@ -12,11 +13,14 @@ public class Buttons : MonoBehaviour
     [SerializeField] float loadTime;
     [Space(20)]
     [Header("Options")]
+    [SerializeField] Settings settingManager;
+    [SerializeField] MusicManager backgroundMusic;
     static public bool walking = true;
     static public bool snapturning = false;
     static public int brightness = 100;
     static public float volume = 1;
-
+    static public float musicVolume = 1;
+    static public float playerHeightOffset = 0f;
 
     public void GoToScene(string sceneName)
     {
@@ -40,6 +44,7 @@ public class Buttons : MonoBehaviour
         {
             buttonText.text = "  < Teleport >";
         }
+        settingManager.UpdateSettings();
     }
 
     public void ToggleSnapturning(TextMeshProUGUI buttonText)
@@ -51,8 +56,9 @@ public class Buttons : MonoBehaviour
         }
         else
         {
-            buttonText.text = "  < Snapturning: Off >"; 
+            buttonText.text = "  < Snapturning: Off >";
         }
+        settingManager.UpdateSettings();
     }
 
     public void ChangeBrightnessUp(TextMeshProUGUI buttonText)
@@ -62,6 +68,7 @@ public class Buttons : MonoBehaviour
             brightness += 10;
         }
         buttonText.text = $"  < Brightness >       {brightness}";
+        settingManager.UpdateSettings();
     }
 
     public void ChangeBrightnessDown(TextMeshProUGUI buttonText)
@@ -71,6 +78,7 @@ public class Buttons : MonoBehaviour
             brightness -= 10;
         }
         buttonText.text = $"  < Brightness >       {brightness}";
+        settingManager.UpdateSettings();
     }
 
     public void ChangeVolumeUp(TextMeshProUGUI buttonText)
@@ -78,17 +86,67 @@ public class Buttons : MonoBehaviour
         if (volume <= .9f)
         {
             volume += .1f;
+            volume = (float)Math.Round(volume, 1);
         }
-        buttonText.text = $"  < Sound Volume >    {volume * 100}";
+        buttonText.text = $"  < Global Volume >     {volume * 100}";
+        settingManager.UpdateSettings();
     }
 
     public void ChangeVolumeDown(TextMeshProUGUI buttonText)
     {
         if (volume >= .1f)
         {
-           volume -= .1f;
+            volume -= .1f;
+            volume = (float)Math.Round(volume, 1);
         }
-        buttonText.text = $"  < Sound Volume >    {volume * 100}";
+        buttonText.text = $"  < Global Volume >     {volume * 100}";
+        settingManager.UpdateSettings();
+    }
+
+    public void ChangeMusicVolumeUp(TextMeshProUGUI buttonText)
+    {
+        if (musicVolume <= .9f)
+        {
+            musicVolume += .1f;
+            musicVolume = (float)Math.Round(musicVolume, 1);
+        }
+        buttonText.text = $"  < Music Volume >     {musicVolume * 100}";
+        backgroundMusic.UpdateMusicVolume();
+    }
+
+    public void ChangeMusicVolumeDown(TextMeshProUGUI buttonText)
+    {
+        if (musicVolume >= .1f)
+        {
+            musicVolume -= .1f;
+            musicVolume = (float)Math.Round(musicVolume, 1);
+        }
+        buttonText.text = $"  < Music Volume >     {musicVolume * 100}";
+        backgroundMusic.UpdateMusicVolume();
+    }
+
+    public void ChangePlayerHeightUp(TextMeshProUGUI buttonText)
+    {
+        if (playerHeightOffset <= .3f)
+        {
+            playerHeightOffset += .1f;
+        }
+        float playerHeightDisplay = playerHeightOffset + 1.7f;
+        playerHeightDisplay = playerHeightDisplay * 100;
+        buttonText.text = $"  < Player Height >     {playerHeightDisplay}";
+        settingManager.UpdateSettings();
+    }
+
+    public void ChangePlayerHeightDown(TextMeshProUGUI buttonText)
+    {
+        if (playerHeightOffset >= -0.7f)
+        {
+            playerHeightOffset -= .1f;
+        }
+        float playerHeightDisplay = playerHeightOffset + 1.7f;
+        playerHeightDisplay = playerHeightDisplay * 100;
+        buttonText.text = $"  < Player Height >     {playerHeightDisplay}";
+        settingManager.UpdateSettings();
     }
 
     IEnumerator Transition(string sceneName)

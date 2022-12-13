@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 1547290207044059693}
   - component: {fileID: 2510422178156137864}
   - component: {fileID: 374424264475064642}
-  - component: {fileID: 4516981509301582091}
-  - component: {fileID: 5540353864308738162}
   m_Layer: 0
   m_Name: mushroom_2
   m_TagString: Untagged
@@ -85,31 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4516981509301582091
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176017702558963863}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.09095192
-  m_Height: 0.18190384
-  m_Direction: 1
-  m_Center: {x: -0.033925936, y: 0.18, z: 0.0012512207}
---- !u!136 &5540353864308738162
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176017702558963863}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.035268784
-  m_Height: 0.2
-  m_Direction: 1
-  m_Center: {x: -0.0135269165, y: 0.09476862, z: -0.0013828278}

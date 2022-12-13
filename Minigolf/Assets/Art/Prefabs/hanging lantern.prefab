@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 7443992613255274752}
   - component: {fileID: 4659722163537221066}
   - component: {fileID: 8928484192761838148}
-  - component: {fileID: 3445118166810367695}
   m_Layer: 0
   m_Name: hanging lantern
   m_TagString: Untagged
@@ -214,16 +213,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5861459, y: 3.922131, z: 1.1670094}
   m_Center: {x: 0, y: 1.9610655, z: -0.2040844}
---- !u!65 &3445118166810367695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6605185187406492703}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5861459, y: 1.403553, z: 1.2716825}
-  m_Center: {x: 0, y: 3.2203546, z: 1.0006431}

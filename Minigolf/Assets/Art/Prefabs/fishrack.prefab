@@ -342,8 +342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4434033542450046003}
   - component: {fileID: 4434033542450046002}
-  - component: {fileID: 4434033542450045997}
-  - component: {fileID: 4434033542450045996}
   m_Layer: 0
   m_Name: fishrack
   m_TagString: Untagged
@@ -385,34 +383,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0731578, y: 0.532176, z: 0.20682624}
-  m_Center: {x: 0.009580076, y: 1.3428273, z: -0.008019954}
---- !u!65 &4434033542450045997
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3946009446070009481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1119654, y: 1.67258, z: 0.20682624}
-  m_Center: {x: -1.4967915, y: 0.7726253, z: -0.00802255}
---- !u!65 &4434033542450045996
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3946009446070009481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1119654, y: 1.67258, z: 0.20682624}
-  m_Center: {x: 1.48, y: 0.7726253, z: -0.00802255}
+  m_Size: {x: 3.0731578, y: 1.6306286, z: 0.20682624}
+  m_Center: {x: 0.009580016, y: 0.79360104, z: -0.008019954}
 --- !u!1 &4539324928236901567
 GameObject:
   m_ObjectHideFlags: 0

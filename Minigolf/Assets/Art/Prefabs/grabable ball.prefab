@@ -114,6 +114,7 @@ MonoBehaviour:
   raycastCube: {fileID: 4250408139216698308}
   ballRolling: 0
   mushroomBounceSpeed: 40
+  grabBall: {fileID: 7091163263157016338}
 --- !u!23 &120787842803029087
 MeshRenderer:
   m_ObjectHideFlags: 0

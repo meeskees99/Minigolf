@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 1308676101428024290}
   - component: {fileID: 2703992036341980231}
   - component: {fileID: 171828549038565517}
-  - component: {fileID: 5987965102879893797}
-  - component: {fileID: 828155199641898057}
   m_Layer: 0
   m_Name: PineTreeMetSneeuw
   m_TagString: Untagged
@@ -85,31 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5987965102879893797
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829175408056682840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 7.053608
-  m_Direction: 1
-  m_Center: {x: 0.013490796, y: 3.526804, z: -0.060384154}
---- !u!136 &828155199641898057
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829175408056682840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.9
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.013490796, y: -0.3699999, z: -0.060384154}

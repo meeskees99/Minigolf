@@ -15,6 +15,7 @@ TagManager:
   - smallSnowBalls
   - bigSnowBall
   - Mushroom
+  - flag
   layers:
   - Default
   - TransparentFX

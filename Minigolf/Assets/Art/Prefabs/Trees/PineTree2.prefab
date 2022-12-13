@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 8735976121371574787}
   - component: {fileID: 5662063126093942182}
   - component: {fileID: 7599621115697838444}
-  - component: {fileID: 4402119604964859868}
-  - component: {fileID: 1864377556220744654}
-  - component: {fileID: 1112491215940742047}
+  - component: {fileID: 2809934664430851276}
   m_Layer: 0
   m_Name: PineTree2
   m_TagString: Untagged
@@ -86,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4402119604964859868
-CapsuleCollider:
+--- !u!64 &2809934664430851276
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,35 +94,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 7.0538535
-  m_Direction: 1
-  m_Center: {x: 0.30960274, y: 3.5269263, z: -0.080019236}
---- !u!136 &1864377556220744654
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8248267211233663161}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 1.7072573
-  m_Direction: 1
-  m_Center: {x: 0.07999998, y: -0.3463714, z: -0.080019236}
---- !u!136 &1112491215940742047
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8248267211233663161}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.8
-  m_Height: 7.053608
-  m_Direction: 1
-  m_Center: {x: 0.3, y: 2.7, z: -0.060384154}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6255687079079774844, guid: 672f5730433040143b1fb5616eaf484c, type: 3}

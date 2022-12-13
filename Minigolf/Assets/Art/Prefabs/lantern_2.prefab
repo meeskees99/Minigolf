@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3689161713329102955}
   - component: {fileID: 332512781892644814}
   - component: {fileID: 2556256597452790532}
-  - component: {fileID: 1258592621075275615}
+  - component: {fileID: 461360356107084162}
   m_Layer: 3
   m_Name: lantern_2
   m_TagString: Untagged
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1258592621075275615
+--- !u!64 &461360356107084162
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,7 +98,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5053925668127403250, guid: 59202af1724745044ac997f7c10db60a, type: 3}
+  m_Mesh: {fileID: -3329902420748629119, guid: 2f89c6cb932749643ba418fb440c6af5, type: 3}
 --- !u!1 &4474240568019427802
 GameObject:
   m_ObjectHideFlags: 0

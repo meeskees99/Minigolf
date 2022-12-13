@@ -45,7 +45,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9960785, g: 0.9960785, b: 0.24313727, a: 1}
-  m_Intensity: 2
+  m_Intensity: 5
   m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -213,4 +213,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 420af2640da09d34eb8e888e87f26729, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: 166496320a86df9488220aba12bae2c8, type: 3}

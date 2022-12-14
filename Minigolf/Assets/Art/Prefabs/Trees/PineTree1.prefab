@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7887987108441734029}
   - component: {fileID: 5373697271354838855}
   - component: {fileID: 2356101318031489089}
+  - component: {fileID: 7688890598137897132}
   m_Layer: 0
   m_Name: PineTree1
   m_TagString: Untagged
@@ -98,3 +99,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6255687079079774844, guid: 672f5730433040143b1fb5616eaf484c, type: 3}
+--- !u!114 &7688890598137897132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878263225215676050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c2732ff506c7f4aac3cadd5dbea593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMat: {fileID: 2100000, guid: f9965b42d0d0abe488bc3e78bf418166, type: 2}
+  transMat: {fileID: 2100000, guid: 3bf03e66a45b3be47977478e6eb3f4f2, type: 2}
+  mesh: {fileID: 5373697271354838855}
+  range: 2

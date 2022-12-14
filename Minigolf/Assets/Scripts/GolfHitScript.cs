@@ -34,8 +34,12 @@ public class GolfHitScript : MonoBehaviour
 
     void Update()
     {
-        clubHolding();
         clubCollision();
+    }
+
+    void FixedUpdate()
+    {
+        clubHolding();
         ballRolling = instantiatedGolfBall.GetComponent<BallCollision>().ballRolling;
         if (ballRolling)
         {
@@ -48,7 +52,7 @@ public class GolfHitScript : MonoBehaviour
         }
         //kijken of bal rolt
     }
- 
+
     private void DestroyClub(InputAction.CallbackContext obj)
     {
         if(hasClub)
@@ -92,13 +96,16 @@ public class GolfHitScript : MonoBehaviour
         clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
         oldClubPosition = clubCollider.transform.position;
         dist = Vector2.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-        if (dist < 0.1f && ballRolling == false && clubSpeed > 4|| dist < 0.03f && ballRolling == false || dist < 0.4f && ballRolling == false && clubSpeed > 110)
+        if(ballRolling == false)
         {
-            Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
-            if(direction.x + direction.y + direction.z > 0)
+            if (dist < 0.03f && clubSpeed < 1 || dist < 0.1f && clubSpeed > 4 || dist < 0.3f && clubSpeed < 90)
             {
-                instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
-            }
+                Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
+                if (direction.x + direction.y + direction.z > 0)
+                {
+                    instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
+                }                
+            }                                                    
         }
         //eigen gemaakte collider die misschien nodig is
     }

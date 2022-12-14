@@ -11,7 +11,6 @@ public class BallCollision : MonoBehaviour
     public GameObject raycastCube;
     public bool ballRolling;
     public float mushroomBounceSpeed;
-    public GameObject grabBall;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -55,10 +54,7 @@ public class BallCollision : MonoBehaviour
 
         if (collision.gameObject.tag == "flag")
         {
-            Instantiate(grabBall, transform.position, Quaternion.identity);
-            club.GetComponent<GolfHitScript>().instantiatedGolfBall = grabBall;
-            Destroy(gameObject);
-            //spawn een bal die de speler wel op kan pakken op de positie van de bal
+            //kan bal pakken, nu kan de bal altijd gepakken worden
         }
     }
 

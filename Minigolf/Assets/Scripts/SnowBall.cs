@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class SnowBall : MonoBehaviour
 {
+    private bool snowBallTooBig;
     void Update()
     {
         if(gameObject.tag == "bigSnowBall")
         {
             var snowBallSpeed = GetComponent<Rigidbody>().velocity.magnitude / 1000;
-            Mathf.Clamp(transform.localScale.x, 0, 1.4f); 
-            transform.localScale += new Vector3(snowBallSpeed, snowBallSpeed, snowBallSpeed);
-            GetComponent<Rigidbody>().mass += snowBallSpeed;
+            if(snowBallTooBig == false)
+            {
+                GetComponent<Rigidbody>().mass += snowBallSpeed;
+                transform.localScale += new Vector3(snowBallSpeed, snowBallSpeed, snowBallSpeed);
+            }
+
+            if(transform.localScale.x > 1)
+            {
+                snowBallTooBig = true;
+            }
         }
     }
 

@@ -17,6 +17,7 @@ TagManager:
   - Mushroom
   - flag
   - insideLog
+  - logCheckpoint
   layers:
   - Default
   - TransparentFX

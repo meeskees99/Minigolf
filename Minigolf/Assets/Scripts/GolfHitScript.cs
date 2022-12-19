@@ -97,7 +97,7 @@ public class GolfHitScript : MonoBehaviour
             clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
             oldClubPosition = clubCollider.transform.position;
             dist = Vector2.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-            if (dist < 0.01f && clubSpeed < 1 || dist < 0.04f && clubSpeed > 4 || dist < 0.3f && clubSpeed > 90 && clubSpeed < 90)
+            if (dist < 0.01f && clubSpeed < 1 || dist < 0.04f && clubSpeed > 4 || dist < 0.4f && clubSpeed > 90 || dist < 0.4f && clubSpeed < 90)
             {
                 Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
                 if (direction.x + direction.y + direction.z > 0)

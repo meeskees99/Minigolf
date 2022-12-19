@@ -33,7 +33,7 @@ public class BallCollision : MonoBehaviour
         {
             ballRolling = true;
             GetComponent<Rigidbody>().drag += Time.deltaTime;
-            GetComponent<Rigidbody>().angularDrag += Time.deltaTime;
+            GetComponent<Rigidbody>().angularDrag += Time.deltaTime * 3;
         }
         //stopt de bal als het heel langzaam gaat
     }

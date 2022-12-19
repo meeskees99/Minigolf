@@ -15,6 +15,7 @@ public class BallCollision : MonoBehaviour
     void Start()
     {
         club = GameObject.Find("Putter");
+        //Physics.IgnoreCollision(club.GetComponentInChildren<BoxCollider>(), GetComponent<SphereCollider>());
     }
 
     void ballVoidSpeed()

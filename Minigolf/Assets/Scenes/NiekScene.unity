@@ -5988,7 +5988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262865543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45899993, y: 0.733, z: 1.1310005}
+  m_LocalPosition: {x: 0.45899993, y: 0.921, z: 1.1310005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10291,6 +10291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Putter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542572905779980323, guid: 9178b15494fb35e4f857fd43ce215707,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2171721617658884761, guid: 9178b15494fb35e4f857fd43ce215707,
         type: 3}

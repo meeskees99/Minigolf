@@ -29,15 +29,9 @@ public class GolfHitScript : MonoBehaviour
         instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
         //disable collision between player and golf stick
         Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
-        Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), instantiatedGolfBall.GetComponent<SphereCollider>());
     }
 
     void Update()
-    {
-        clubCollision();
-    }
-
-    void FixedUpdate()
     {
         clubHolding();
         ballRolling = instantiatedGolfBall.GetComponent<BallCollision>().ballRolling;
@@ -51,6 +45,11 @@ public class GolfHitScript : MonoBehaviour
             clubCollider.SetActive(true);
         }
         //kijken of bal rolt
+    }
+
+    void FixedUpdate()
+    {
+        clubCollision();
     }
 
     private void DestroyClub(InputAction.CallbackContext obj)
@@ -93,12 +92,12 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
-        clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
-        oldClubPosition = clubCollider.transform.position;
-        dist = Vector2.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
         if(ballRolling == false)
         {
-            if (dist < 0.03f && clubSpeed < 1 || dist < 0.1f && clubSpeed > 4 || dist < 0.4f && clubSpeed < 90)
+            clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
+            oldClubPosition = clubCollider.transform.position;
+            dist = Vector2.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
+            if (dist < 0.03f && clubSpeed < 1 || dist < 0.1f && clubSpeed > 4 || dist < 0.4f && clubSpeed > 90 && clubSpeed < 90)
             {
                 Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
                 if (direction.x + direction.y + direction.z > 0)

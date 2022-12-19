@@ -11,6 +11,7 @@ public class BallCollision : MonoBehaviour
     public GameObject raycastCube;
     public bool ballRolling;
     public float mushroomBounceSpeed;
+    private bool insideLog;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -56,6 +57,23 @@ public class BallCollision : MonoBehaviour
         {
             //kan bal pakken, nu kan de bal altijd gepakken worden
         }
+
+        if (collision.gameObject.tag == "insideLog")
+        {
+            insideLog = true;
+            GetComponent<Rigidbody>().drag = 0;
+            GetComponent<Rigidbody>().angularDrag = 0;
+        }
+        //in de log
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.tag  == "insideLog")
+        {
+            insideLog = false;
+        }
+        //uit de log
     }
 
     void Update()
@@ -65,6 +83,9 @@ public class BallCollision : MonoBehaviour
             checkpoint = transform.position;
         }
         //checkpoint
-        ballVoidSpeed();
+        if (insideLog == false)
+        {
+            ballVoidSpeed();
+        }
     }
 }

@@ -72,12 +72,20 @@ public class BallCollision : MonoBehaviour
         {
             //kan bal pakken, nu kan de bal altijd gepakken worden
         }
+    }
 
+    void OnCollisionStay(Collision collision)
+    {
         if (collision.gameObject.tag == "insideLog")
         {
+            GameObject logCheckpoint = GameObject.FindGameObjectWithTag("logCheckpoint");
             insideLog = true;
             GetComponent<Rigidbody>().drag = 0;
             GetComponent<Rigidbody>().angularDrag = 0;
+
+            Vector3 dir = logCheckpoint.transform.position - transform.position;
+            dir = dir.normalized;
+            GetComponent<Rigidbody>().AddForce(dir * Time.deltaTime);
         }
         //in de log
     }

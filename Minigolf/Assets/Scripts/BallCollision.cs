@@ -12,6 +12,7 @@ public class BallCollision : MonoBehaviour
     public bool ballRolling;
     public float mushroomBounceSpeed;
     private bool insideLog;
+    public GameObject boxUnderBall;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -22,6 +23,7 @@ public class BallCollision : MonoBehaviour
     {
         //check if ball rolling
         Vector3 ballSpeed = GetComponent<Rigidbody>().velocity;
+
         if (ballSpeed == new Vector3(0, 0, 0)) //hard code
         {
             ballRolling = false;
@@ -36,6 +38,13 @@ public class BallCollision : MonoBehaviour
             GetComponent<Rigidbody>().angularDrag += Time.deltaTime * 3;
         }
         //stopt de bal als het heel langzaam gaat
+
+        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling)
+        {
+            GetComponent<Rigidbody>().drag = 4000;
+            GetComponent<Rigidbody>().angularDrag = 4000;
+            //Instantiate(boxUnderBall, transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
+        }
     }
 
     void OnCollisionEnter(Collision collision)

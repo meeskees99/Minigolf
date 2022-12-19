@@ -96,13 +96,14 @@ public class GolfHitScript : MonoBehaviour
         {
             clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
             oldClubPosition = clubCollider.transform.position;
-            dist = Vector2.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-            if (dist < 0.4f && clubSpeed > 70 || dist < 0.4f && clubSpeed < 70 || dist < 0.03f && clubSpeed < 1 || dist < 0.06f && clubSpeed < 70)
+            dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
+            if (dist < 0.3 && clubSpeed > 70 || dist < 0.08 && clubSpeed < 70 || dist < 0.01f && clubSpeed < 1)
             {
                 Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
+                instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
                 if (direction.x + direction.y + direction.z > 0)
                 {
-                    instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
+                    //instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
                 }                
             }                                                    
         }

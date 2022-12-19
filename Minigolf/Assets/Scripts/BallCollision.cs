@@ -34,12 +34,16 @@ public class BallCollision : MonoBehaviour
         else
         {
             ballRolling = true;
-            GetComponent<Rigidbody>().drag += Time.deltaTime;
-            GetComponent<Rigidbody>().angularDrag += Time.deltaTime * 3;
+            if(insideLog == false) //in de log die de bal snel maakt?
+            {
+                GetComponent<Rigidbody>().drag += Time.deltaTime;
+                GetComponent<Rigidbody>().angularDrag += Time.deltaTime * 3;
+                //bal gaat slomer na zo veel tijd
+            }
         }
         //stopt de bal als het heel langzaam gaat
 
-        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling)
+        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false)
         {
             GetComponent<Rigidbody>().drag = 4000;
             GetComponent<Rigidbody>().angularDrag = 4000;
@@ -61,6 +65,7 @@ public class BallCollision : MonoBehaviour
         {
             var direction = (transform.position - collision.transform.position).normalized;
             transform.GetComponent<Rigidbody>().AddForce(raycastCube.transform.up * mushroomBounceSpeed);
+            //tegen mushroom met bounce
         }
 
         if (collision.gameObject.tag == "flag")

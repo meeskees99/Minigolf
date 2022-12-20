@@ -318,7 +318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '   Luuk - Lead Art'
+  m_text: '   Luuk - Art'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e9a0bb99907bd343b89f16a02aecc10, type: 2}
   m_sharedMaterial: {fileID: 4484379358802948409, guid: 5e9a0bb99907bd343b89f16a02aecc10,
@@ -3997,7 +3997,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '   Nathan - Art '
+  m_text: '   Nathan - Lead Art '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e9a0bb99907bd343b89f16a02aecc10, type: 2}
   m_sharedMaterial: {fileID: 4484379358802948409, guid: 5e9a0bb99907bd343b89f16a02aecc10,

@@ -34,7 +34,7 @@ public class GolfHitScript : MonoBehaviour
     void Update()
     {
         clubHolding();
-        ballRolling = instantiatedGolfBall.GetComponent<BallCollision>().ballRolling;
+        ballRolling = instantiatedGolfBall.GetComponent<BallManager>().ballRolling;
         if (ballRolling)
         {
             clubCollider.SetActive(false);

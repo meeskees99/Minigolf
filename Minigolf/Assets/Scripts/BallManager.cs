@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class BallCollision : MonoBehaviour
+public class BallManager : MonoBehaviour
 {
     public GameObject ballRespawn;
     private Vector3 checkpoint;
@@ -12,10 +13,13 @@ public class BallCollision : MonoBehaviour
     public bool ballRolling;
     public float mushroomBounceSpeed;
     private bool insideLog;
-    public GameObject boxUnderBall;
+    [SerializeField] private InputActionReference ballSpawnActionReference;
+    //private Transform oldPreviousTransform;
+    //private Transform oldNewTransform;
     void Start()
     {
         club = GameObject.Find("Putter");
+        ballSpawnActionReference.action.performed += RespawnBall;
         //Physics.IgnoreCollision(club.GetComponentInChildren<BoxCollider>(), GetComponent<SphereCollider>());
     }
 
@@ -29,6 +33,7 @@ public class BallCollision : MonoBehaviour
             ballRolling = false;
             GetComponent<Rigidbody>().drag = 0;
             GetComponent<Rigidbody>().angularDrag = 0;
+            //drag reset
         }
 
         else
@@ -41,13 +46,25 @@ public class BallCollision : MonoBehaviour
                 //bal gaat slomer na zo veel tijd
             }
         }
-        //stopt de bal als het heel langzaam gaat
 
         if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false)
         {
+            /*
+            Vector3 oldSpeed = GetComponent<Rigidbody>().velocity;
+            Vector3 newSpeed = GetComponent<Rigidbody>().velocity;
+            //kijken of de bal slomer gaat
+
+            if(oldSpeed.x + oldSpeed.y + oldSpeed.z > newSpeed.x + newSpeed.z + newSpeed.y)
+            {
+                GetComponent<Rigidbody>().drag = 4000;
+                GetComponent<Rigidbody>().angularDrag = 4000;
+                //stopt de bal als het heel langzaam gaat
+                print("hoi");
+            }
+            */
+
             GetComponent<Rigidbody>().drag = 4000;
             GetComponent<Rigidbody>().angularDrag = 4000;
-            //Instantiate(boxUnderBall, transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
         }
     }
 
@@ -110,5 +127,10 @@ public class BallCollision : MonoBehaviour
         {
             ballVoidSpeed();
         }
+    }
+
+    private void RespawnBall(InputAction.CallbackContext obj)
+    {
+        gameObject.transform.position = checkpoint;
     }
 }

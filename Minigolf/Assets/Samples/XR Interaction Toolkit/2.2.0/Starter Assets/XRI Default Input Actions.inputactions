@@ -777,6 +777,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "BallRespawn",
+                    "type": "Button",
+                    "id": "92cbbc97-74ab-4613-b0c0-7414e632b33f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -876,6 +885,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ClubXR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a9f8eeb-5e89-4ca3-92ae-37fe6a5fab3d",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BallRespawn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

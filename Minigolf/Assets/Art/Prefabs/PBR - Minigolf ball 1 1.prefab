@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 7565241609907295638}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.863474, y: 0.4371, z: 2.7475734}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3817228528327718661}
@@ -113,7 +113,7 @@ MonoBehaviour:
   raycastCube: {fileID: 3488468840066709824}
   ballRolling: 0
   mushroomBounceSpeed: 40
-  boxUnderBall: {fileID: 3063968689982481501, guid: 54f4ad5024405f14eb330fc5d5ce5600,
+  ballSpawnActionReference: {fileID: 1056549368901155998, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
 --- !u!23 &808646429063288539
 MeshRenderer:

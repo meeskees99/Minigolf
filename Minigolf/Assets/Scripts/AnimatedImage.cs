@@ -15,12 +15,12 @@ public class AnimatedImage : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > animationLenght / sprites.Length)
+        if (timer > animationLenght / sprites.Length - 1)
         {
             index++;
             timer = 0;
         }
-        if (index > sprites.Length)
+        if (index > sprites.Length - 1)
         {
             index = 0;
         }

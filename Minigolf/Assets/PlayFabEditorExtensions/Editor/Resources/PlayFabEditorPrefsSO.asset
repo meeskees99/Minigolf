@@ -15,10 +15,10 @@ MonoBehaviour:
   DevAccountEmail: schakelaarnick@gmail.com
   DevAccountToken: yhanaqtgeacsrce8fxrntfbjztqx4gih3siy1gmwqogasy1ejoyk3rgkhm9amkayqwnmhh7w9agjmj91azm4ztgnpsuyzccye3xd3d9ec7hp87nbudyrh6788kwzf9wmg5wdcyftkkhr85amgzuxktm1gwfx6ag4mn99n8wrehytjrqnod1fhojerbxp61qr5n9ak5zu
   AadAuthorization: 
-  SelectedStudio: 
+  SelectedStudio: School
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0

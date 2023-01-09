@@ -6,20 +6,18 @@ using UnityEngine.InputSystem;
 public class BallManager : MonoBehaviour
 {
     public GameObject ballRespawn;
-    private Vector3 checkpoint;
+    public Vector3 checkpoint;
     private GameObject club;
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
     public float mushroomBounceSpeed;
     private bool insideLog;
-    [SerializeField] private InputActionReference ballSpawnActionReference;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
     void Start()
     {
         club = GameObject.Find("Putter");
-        ballSpawnActionReference.action.performed += RespawnBall;
         //Physics.IgnoreCollision(club.GetComponentInChildren<BoxCollider>(), GetComponent<SphereCollider>());
     }
 
@@ -127,10 +125,5 @@ public class BallManager : MonoBehaviour
         {
             ballVoidSpeed();
         }
-    }
-
-    private void RespawnBall(InputAction.CallbackContext obj)
-    {
-        gameObject.transform.position = checkpoint;
     }
 }

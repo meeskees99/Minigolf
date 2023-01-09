@@ -11,6 +11,7 @@ public class GolfHitScript : MonoBehaviour
     public GameObject rightHandRotation;
     public GameObject[] rightHandObjects;
     [SerializeField] private InputActionReference clubActionReference;
+    [SerializeField] private InputActionReference ballSpawnActionReference;
     private bool hasClub;
     public GameObject clubCollider;
     public MeshRenderer clubMesh;
@@ -26,6 +27,7 @@ public class GolfHitScript : MonoBehaviour
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
+        ballSpawnActionReference.action.performed += RespawnBall;
         instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
         //disable collision between player and golf stick
         Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
@@ -108,5 +110,12 @@ public class GolfHitScript : MonoBehaviour
             }                                                    
         }
         //eigen gemaakte collider die misschien nodig is
+    }
+
+    private void RespawnBall(InputAction.CallbackContext obj)
+    {
+        GameObject newBall = Instantiate(golfBall, instantiatedGolfBall.GetComponent<BallManager>().checkpoint, Quaternion.identity);
+        Destroy(instantiatedGolfBall);
+        instantiatedGolfBall = newBall;
     }
 }

@@ -14,7 +14,7 @@ public class GolfHitScript : MonoBehaviour
     [SerializeField] private InputActionReference ballSpawnActionReference;
     private bool hasClub;
     public GameObject clubCollider;
-    public MeshRenderer clubMesh;
+    public MeshRenderer[] clubMesh;
     public GameObject golfBall;
     public GameObject instantiatedGolfBall;
     private Vector3 oldClubPosition;
@@ -75,7 +75,11 @@ public class GolfHitScript : MonoBehaviour
     {
         if (hasClub)
         {
-            clubMesh.enabled = true;
+            for (int i = 0; i < clubMesh.Length; i++)
+            {
+                clubMesh[i].enabled = true;
+            }
+          
             for (int i = 0; i < rightHandObjects.Length; i++)
             {
                 rightHandObjects[i].SetActive(false);
@@ -86,7 +90,11 @@ public class GolfHitScript : MonoBehaviour
 
         if (hasClub == false)
         {
-            clubMesh.enabled = false;
+            for (int i = 0; i < clubMesh.Length; i++)
+            {
+                clubMesh[i].enabled = false;
+            }
+
             for (int i = 0; i < rightHandObjects.Length; i++)
             {
                 rightHandObjects[i].SetActive(true);

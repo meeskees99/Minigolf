@@ -3459,7 +3459,7 @@ PrefabInstance:
     - target: {fileID: 3127728407712097238, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3127728407712097239, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -4706,6 +4706,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2232297153797628696, guid: eeb4885fe73fbc84c98a258eb244d5da,
+        type: 3}
+      propertyPath: animationLenght
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8775579622573601288, guid: eeb4885fe73fbc84c98a258eb244d5da,
         type: 3}
       propertyPath: m_Pivot.x

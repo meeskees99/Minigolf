@@ -105,6 +105,10 @@ public class Keyboard : MonoBehaviour
             };
             PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
         }
+        else if (Playfab.username.Length < 6)
+        {
+            errorMessage.text = "Username is too short! (Min 6 characters)";
+        }
     }
 
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)

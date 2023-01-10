@@ -128,7 +128,7 @@ public class GolfHitScript : MonoBehaviour
     {
         if(Physics.Raycast(clubCollider.transform.position, -transform.up, out RaycastHit hit, 2) && hit.transform.tag == "map")
         {
-            if(hit.point.y < clubCollider.transform.position.y && shaft.localScale.y < 2)
+            if(hit.point.y + 0.01f < clubCollider.transform.position.y && shaft.localScale.y < 2)
             {
                 stickLengthValue += 0.01f;
                 shaft.localScale = new Vector3(1, stickLengthValue, 1);

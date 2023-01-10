@@ -25,6 +25,7 @@ public class GolfHitScript : MonoBehaviour
     public float clubSpeed;
     public float dist;
     private float stickLengthValue;
+    public Transform shaft;
 
     void Start()
     {
@@ -127,26 +128,18 @@ public class GolfHitScript : MonoBehaviour
     {
         if(Physics.Raycast(clubCollider.transform.position, -transform.up, out RaycastHit hit, 2) && hit.transform.tag == "map")
         {
-            if(hit.point.y < clubCollider.transform.position.y)
+            if(hit.point.y < clubCollider.transform.position.y && shaft.localScale.y < 3)
             {
                 stickLengthValue += 0.01f;
-                transform.localScale = new Vector3(1, stickLengthValue, 1);
+                shaft.localScale = new Vector3(1, stickLengthValue, 1);
             }
         }
 
-        else if(transform.localScale.y > 1)
+        else if(shaft.localScale.y > 1)
         {
             stickLengthValue -= 0.01f;
-            transform.localScale = new Vector3(1, stickLengthValue, 1);
+            shaft.localScale = new Vector3(1, stickLengthValue, 1);
         }
-
-        /*
-        if (hit.point.y > clubCollider.transform.position.y)
-        {
-            stickLengthValue -= 1;
-            transform.localScale = new Vector3(1, stickLengthValue, 1);
-        }
-        */
     }
 
     private void RespawnBall(InputAction.CallbackContext obj)

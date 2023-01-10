@@ -24,6 +24,8 @@ public class GolfHitScript : MonoBehaviour
 
     public float clubSpeed;
     public float dist;
+
+    public GameObject clubSpot;
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
@@ -36,6 +38,7 @@ public class GolfHitScript : MonoBehaviour
     void Update()
     {
         clubHolding();
+        clubOnGround();
         ballRolling = instantiatedGolfBall.GetComponent<BallManager>().ballRolling;
         if (ballRolling)
         {
@@ -109,7 +112,18 @@ public class GolfHitScript : MonoBehaviour
                 }                
             }                                                    
         }
-        //eigen gemaakte collider die misschien nodig is
+        //eigen gemaakte collider die nodig is
+    }
+
+    void clubOnGround()
+    {
+        if(Physics.Raycast(clubCollider.transform.position, -transform.up, out RaycastHit hit, 4) && hit.transform.tag == "map")
+        {
+            transform.localScale = new Vector3(1, hit.distance + 1, 1);
+            //club wordt langer
+            clubSpot.transform.position = hit.point;
+            print("wauw");
+        }
     }
 
     private void RespawnBall(InputAction.CallbackContext obj)

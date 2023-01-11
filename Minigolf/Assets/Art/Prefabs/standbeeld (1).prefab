@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2634347960656147090}
   - component: {fileID: 2697099830659700846}
   - component: {fileID: 5410101908803386667}
+  - component: {fileID: 3649009071353481228}
   m_Layer: 0
   m_Name: minos prime
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &3649009071353481228
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16472320577688002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.4135879
+  m_Height: 6.4612613
+  m_Direction: 1
+  m_Center: {x: -0.03578174, y: 1.9905875, z: -0.050726533}
 --- !u!1 &2332145778420517038
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3723478134586458129}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -27,7 +27,7 @@ public class GolfHitScript : MonoBehaviour
     private float stickLengthValue;
     public Transform shaft;
 
-    public int ballHitCounter;
+    static public int ballHitCounter;
 
     void Start()
     {

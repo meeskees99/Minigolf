@@ -114,6 +114,11 @@ public class BallManager : MonoBehaviour
             insideLog = false;
         }
         //uit de log
+
+        if(collision.gameObject.tag == "flag")
+        {
+            //ga naar andere scene
+        }
     }
 
     void Update()

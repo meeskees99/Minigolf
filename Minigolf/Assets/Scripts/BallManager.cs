@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BallManager : MonoBehaviour
 {
@@ -85,6 +86,7 @@ public class BallManager : MonoBehaviour
 
         if (collision.gameObject.tag == "flag")
         {
+            gameObject.GetComponent<XRGrabInteractable>().enabled = true;
             //kan bal pakken, nu kan de bal altijd gepakken worden
         }
     }
@@ -112,6 +114,11 @@ public class BallManager : MonoBehaviour
             insideLog = false;
         }
         //uit de log
+
+        if(collision.gameObject.tag == "flag")
+        {
+            //ga naar andere scene
+        }
     }
 
     void Update()

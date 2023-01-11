@@ -79,7 +79,14 @@ public class Keyboard : MonoBehaviour
 
     public void Captialize()
     {
-        if (!capitalize)
+        if (!capitalize && !capitalizeOnce)
+        {
+            capitalize = true;
+            capitalizeOnce = false;
+            capsButton.color = new Color32(255, 255, 150, 255);
+            shiftButton.color = new Color32(255, 255, 255, 255);
+        }
+        else if (capitalize && capitalizeOnce)
         {
             capitalize = true;
             capitalizeOnce = false;

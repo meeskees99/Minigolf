@@ -2499,7 +2499,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -10716,7 +10716,7 @@ MonoBehaviour:
   rightHandObjects:
   - {fileID: 190339676}
   - {fileID: 190339673}
-  clubActionReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
+  clubActionReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
     type: 3}
   ballSpawnActionReference: {fileID: 1056549368901155998, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -10734,6 +10734,7 @@ MonoBehaviour:
   clubSpeed: 0
   dist: 0
   shaft: {fileID: 7007671714411023575}
+  ballHitCounter: 0
 --- !u!4 &7007671714411023575
 Transform:
   m_ObjectHideFlags: 0

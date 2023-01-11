@@ -27,6 +27,8 @@ public class GolfHitScript : MonoBehaviour
     private float stickLengthValue;
     public Transform shaft;
 
+    public int ballHitCounter;
+
     void Start()
     {
         clubActionReference.action.performed += DestroyClub;
@@ -115,6 +117,7 @@ public class GolfHitScript : MonoBehaviour
             {
                 Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
                 instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
+                ballHitCounter++;
                 if (direction.x + direction.y + direction.z > 0)
                 {
                     //instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);

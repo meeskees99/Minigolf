@@ -949,8 +949,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128010043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.403, y: 0.67, z: 0.487}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.67592, y: 0.79, z: 0.487}
+  m_LocalScale: {x: 0.20915382, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274117445}
@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 274117447}
   - component: {fileID: 274117446}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: realDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1397,8 +1397,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274117444}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.406, y: -0.22, z: -0.054}
-  m_LocalScale: {x: 0.13329963, y: 1, z: 0.8660099}
+  m_LocalPosition: {x: -1.266, y: -0.21999988, z: -0.05399996}
+  m_LocalScale: {x: 0.13329963, y: 1, z: 0.86600983}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128010044}
@@ -2151,7 +2151,7 @@ GameObject:
   - component: {fileID: 437084908}
   - component: {fileID: 437084907}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2492,6 +2492,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 456728090}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &475450762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475450763}
+  - component: {fileID: 475450764}
+  m_Layer: 0
+  m_Name: elevatorCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475450763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475450762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalScale: {x: 0.66137, y: 1, z: 0.7391302}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1254352847}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &475450764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475450762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &502534793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4616,7 +4661,7 @@ GameObject:
   - component: {fileID: 917618910}
   - component: {fileID: 917618909}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5456,7 +5501,7 @@ GameObject:
   - component: {fileID: 1037542348}
   - component: {fileID: 1037542347}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6565,6 +6610,9 @@ MonoBehaviour:
   - {fileID: 2107253062}
   - {fileID: 441010941}
   - {fileID: 641505057}
+  timer: 0
+  door: {fileID: 128010043}
+  doorSpeed: 1
 --- !u!65 &1254352844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6644,6 +6692,7 @@ Transform:
   - {fileID: 917618908}
   - {fileID: 437084906}
   - {fileID: 128010044}
+  - {fileID: 475450763}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

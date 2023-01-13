@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 7986770421473800621}
   m_Layer: 2
   m_Name: PBR - Minigolf ball 1 1
-  m_TagString: Untagged
+  m_TagString: golfBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

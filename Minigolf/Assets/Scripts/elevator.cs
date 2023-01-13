@@ -24,13 +24,13 @@ public class elevator : MonoBehaviour
     {
         if(ballInElevator)
         {
-            door.transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(5, 1, 1), doorSpeed);
+            door.transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(0.8f, 0, 0), doorSpeed);
             if (Vector3.Distance(transform.position, waypoints[waypointIndex].position) < 0.1f && waypointIndex != 3)
             {
                 waypointIndex++;
                 enemyRotation = Quaternion.LookRotation(waypoints[waypointIndex].transform.position - transform.position);
             }
-            transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].position, 1 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].position, 0.2f * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, enemyRotation, Time.deltaTime * turnSpeed);
         }
     }

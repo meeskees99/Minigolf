@@ -18,6 +18,8 @@ TagManager:
   - flag
   - insideLog
   - logCheckpoint
+  - golfBall
+  - insideObstacle
   layers:
   - Default
   - TransparentFX

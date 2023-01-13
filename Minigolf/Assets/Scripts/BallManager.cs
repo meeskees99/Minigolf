@@ -14,6 +14,7 @@ public class BallManager : MonoBehaviour
     public bool ballRolling;
     public float mushroomBounceSpeed;
     private bool insideLog;
+    private bool insideObstacle;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
     void Start()
@@ -38,7 +39,7 @@ public class BallManager : MonoBehaviour
         else
         {
             ballRolling = true;
-            if(insideLog == false) //in de log die de bal snel maakt?
+            if(insideLog == false && insideObstacle == false) //in de log die de bal snel maakt?
             {
                 GetComponent<Rigidbody>().drag += Time.deltaTime;
                 GetComponent<Rigidbody>().angularDrag += Time.deltaTime * 3;
@@ -46,7 +47,7 @@ public class BallManager : MonoBehaviour
             }
         }
 
-        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false)
+        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false && insideObstacle == false)
         {
             /*
             Vector3 oldSpeed = GetComponent<Rigidbody>().velocity;
@@ -104,7 +105,14 @@ public class BallManager : MonoBehaviour
             dir = dir.normalized;
             GetComponent<Rigidbody>().AddForce(dir * Time.deltaTime);
         }
-        //in de log
+        //in de obstacle
+
+        if(collision.gameObject.tag == "insideObstacle")
+        {
+            GetComponent<Rigidbody>().drag = 0;
+            GetComponent<Rigidbody>().angularDrag = 0;
+            insideObstacle = true;
+        }
     }
 
     void OnCollisionExit(Collision collision)
@@ -112,6 +120,11 @@ public class BallManager : MonoBehaviour
         if(collision.gameObject.tag  == "insideLog")
         {
             insideLog = false;
+        }
+
+        if(collision.gameObject.tag == "insideObstacle")
+        {
+            insideObstacle = false;
         }
         //uit de log
 
@@ -128,7 +141,7 @@ public class BallManager : MonoBehaviour
             checkpoint = transform.position;
         }
         //checkpoint
-        if (insideLog == false)
+        if (insideLog == false && insideObstacle == false)
         {
             ballVoidSpeed();
         }

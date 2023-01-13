@@ -39,6 +39,7 @@ public class elevator : MonoBehaviour
     {
         if(other.gameObject.tag == "golfBall")
         {
+            print("hoi");
             timer += Time.deltaTime;
             if(timer > 1)
             {

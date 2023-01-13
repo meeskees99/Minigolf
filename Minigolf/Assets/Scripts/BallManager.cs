@@ -105,7 +105,6 @@ public class BallManager : MonoBehaviour
             dir = dir.normalized;
             GetComponent<Rigidbody>().AddForce(dir * Time.deltaTime);
         }
-        //in de obstacle
 
         if(collision.gameObject.tag == "insideObstacle")
         {

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using PlayFab;
+using PlayFab.ClientModels;
+using UnityEngine.SceneManagement;
 
 public class BallManager : MonoBehaviour
 {
@@ -17,6 +20,8 @@ public class BallManager : MonoBehaviour
     private bool insideObstacle;
     [SerializeField] AudioSource rollAudio;
     private bool rollSoundTriggered;
+    [SerializeField] string nextScene;
+    [SerializeField] string targetLeaderboard;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
     void Start()
@@ -143,6 +148,9 @@ public class BallManager : MonoBehaviour
         if(collision.gameObject.tag == "flag")
         {
             //ga naar andere scene
+            SceneManager.LoadScene(nextScene);
+            SendLeaderboard(GolfHitScript.ballHitCounter);
+            GolfHitScript.ballHitCounter = 0;
         }
     }
 
@@ -157,5 +165,32 @@ public class BallManager : MonoBehaviour
         {
             ballVoidSpeed();
         }
+    }
+
+    public void SendLeaderboard(int score)
+    {
+        var request = new UpdatePlayerStatisticsRequest
+        {
+            Statistics = new List<StatisticUpdate>
+            {
+                new StatisticUpdate
+                {
+                    StatisticName = targetLeaderboard,
+                    Value = score
+                }
+            }
+        };
+        PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
+    }
+
+    void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
+    {
+        Debug.Log("Succesfull leaderboard sent");
+    }
+
+    void OnError(PlayFabError error)
+    {
+        Debug.Log("Error while sending leaderboard!");
+        Debug.Log(error.GenerateErrorReport());
     }
 }

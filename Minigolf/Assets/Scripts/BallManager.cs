@@ -15,6 +15,8 @@ public class BallManager : MonoBehaviour
     public float mushroomBounceSpeed;
     private bool insideLog;
     private bool insideObstacle;
+    [SerializeField] AudioSource rollAudio;
+    private bool rollSoundTriggered;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
     void Start()
@@ -65,6 +67,17 @@ public class BallManager : MonoBehaviour
 
             GetComponent<Rigidbody>().drag = 4000;
             GetComponent<Rigidbody>().angularDrag = 4000;
+        }
+
+        if (ballRolling && !rollSoundTriggered)
+        {
+            rollAudio.Play();
+            rollSoundTriggered = true;
+        }
+        else if (!ballRolling && rollSoundTriggered)
+        {
+            rollAudio.Pause();
+            rollSoundTriggered = false;
         }
     }
 

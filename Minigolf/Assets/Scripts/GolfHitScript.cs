@@ -22,6 +22,8 @@ public class GolfHitScript : MonoBehaviour
     public float clubForce;
     public Transform spawn;
 
+    [SerializeField] PlayerScript playerscript;
+
     public float clubSpeed;
     public float dist;
     private float stickLengthValue;
@@ -34,6 +36,7 @@ public class GolfHitScript : MonoBehaviour
         clubActionReference.action.performed += DestroyClub;
         ballSpawnActionReference.action.performed += RespawnBall;
         instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
+        playerscript.ball = instantiatedGolfBall;
         //disable collision between player and golf stick
         Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
     }

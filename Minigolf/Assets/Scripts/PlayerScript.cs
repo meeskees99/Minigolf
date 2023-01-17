@@ -16,6 +16,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject ball;
     [SerializeField] bool lookingForBall;
     [SerializeField] InputActionReference compasActionReference;
+    [SerializeField] GameObject raycastGlow;
+    private RaycastHit hit;
 
     private void Start()
     {
@@ -48,6 +50,8 @@ public class PlayerScript : MonoBehaviour
             compass.transform.rotation = Quaternion.LookRotation(compassRotation);
             compass.transform.rotation = Quaternion.Euler(0, compass.transform.eulerAngles.y, compass.transform.eulerAngles.z);
         }
+
+        RaycastInteraction();
     }
 
     private void Compas(InputAction.CallbackContext obj)
@@ -60,6 +64,22 @@ public class PlayerScript : MonoBehaviour
         else
         {
             compass.SetActive(true);
+        }
+    }
+
+    private void RaycastInteraction()
+    {
+        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 100))
+        {
+            if(hit.transform.gameObject.tag == "insideObstacle")
+            {
+                hit.transform.gameObject.GetComponent<Light>().enabled = true;
+            }
+        }
+
+        else
+        {
+            hit.transform.gameObject.GetComponent<Light>().enabled = false;
         }
     }
 }

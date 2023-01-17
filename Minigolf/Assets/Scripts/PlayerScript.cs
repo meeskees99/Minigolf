@@ -12,7 +12,7 @@ public class PlayerScript : MonoBehaviour
     [Space(20)]
     [Header("Compass")]
     [SerializeField] GameObject compass;
-    [SerializeField] GameObject ball;
+    public GameObject ball;
     [SerializeField] bool lookingForBall;
 
     private void Start()

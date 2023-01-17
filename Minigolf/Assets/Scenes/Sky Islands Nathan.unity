@@ -510,7 +510,7 @@ PrefabInstance:
     - target: {fileID: 2017907488466729007, guid: abe2854ab24d97d45b9ffa0b5ae791a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2017907488466729007, guid: abe2854ab24d97d45b9ffa0b5ae791a8,
         type: 3}
@@ -4817,18 +4817,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1414
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1414
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1414
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.887
+      value: 2.932
       objectReference: {fileID: 0}
     - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.759
+      value: 15.765
       objectReference: {fileID: 0}
     - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.404
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 2686390954443566828, guid: 44eaec7f5adec42419cc3263a103fd47,
         type: 3}
@@ -6323,7 +6338,7 @@ PrefabInstance:
     - target: {fileID: 2017907488466729007, guid: abe2854ab24d97d45b9ffa0b5ae791a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2017907488466729007, guid: abe2854ab24d97d45b9ffa0b5ae791a8,
         type: 3}

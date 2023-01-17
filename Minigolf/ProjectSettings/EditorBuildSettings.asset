@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Luuks Sneeuwmap.unity
     guid: ae60a4ef5ba04c2449dccc24d7e37e57
   - enabled: 1
-    path: Assets/Scenes/NathansScene.unity
+    path: Assets/Scenes/Magical Forest Nathan.unity
     guid: 473f3da36e6079647b3631e4e45f4bf3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ddccdb4ac1a1e9d4eabc76eec50dc415,

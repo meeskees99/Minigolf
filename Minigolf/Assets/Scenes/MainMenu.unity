@@ -4752,7 +4752,7 @@ PrefabInstance:
     - target: {fileID: 2232297153797628696, guid: eeb4885fe73fbc84c98a258eb244d5da,
         type: 3}
       propertyPath: animationLenght
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8775579622573601288, guid: eeb4885fe73fbc84c98a258eb244d5da,
         type: 3}

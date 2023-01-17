@@ -10,6 +10,13 @@ public class Buttons : MonoBehaviour
     [Header("Level selector")]
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject levelMenu;
+    static int currentSelectedLevel;
+    [SerializeField] int levels;
+    [SerializeField] Sprite[] levelPreviews;
+    [SerializeField] Image previewImage;
+    [SerializeField] string[] levelScenes;
+    [SerializeField] TextMeshProUGUI levelDisplayName;
+    [SerializeField] string[] levelNames;
     [Header("LoadingScreen")]
     [SerializeField] Image[] dimmedImages;
     [SerializeField] float dimSpeed;
@@ -34,6 +41,22 @@ public class Buttons : MonoBehaviour
     {
         mainMenu.SetActive(false);
         levelMenu.SetActive(true);
+    }
+
+    public void SelectNextLevel(int indexShift)
+    {
+        Buttons.currentSelectedLevel += indexShift;
+        if (Buttons.currentSelectedLevel >= levels)
+        {
+            Buttons.currentSelectedLevel = 0;
+        }
+        previewImage.sprite = levelPreviews[Buttons.currentSelectedLevel];
+        levelDisplayName.text = levelNames[Buttons.currentSelectedLevel];
+    }
+
+    public void StartLevel()
+    {
+        StartCoroutine(Transition(levelScenes[Buttons.currentSelectedLevel]));
     }
 
     public void Quit()

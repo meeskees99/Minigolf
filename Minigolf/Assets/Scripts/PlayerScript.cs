@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] GameObject compass;
     public GameObject ball;
     [SerializeField] bool lookingForBall;
+    [SerializeField] InputActionReference compasActionReference;
 
     private void Start()
     {
         prevPos = transform.position;
+        compasActionReference.action.performed += Compas;
     }
 
     private void Update()
@@ -44,6 +47,19 @@ public class PlayerScript : MonoBehaviour
             Vector3 compassRotation = Vector3.RotateTowards(compass.transform.forward, targetDirection, 180 * Time.deltaTime, 0.0f);
             compass.transform.rotation = Quaternion.LookRotation(compassRotation);
             compass.transform.rotation = Quaternion.Euler(0, compass.transform.eulerAngles.y, compass.transform.eulerAngles.z);
+        }
+    }
+
+    private void Compas(InputAction.CallbackContext obj)
+    {
+        if(compass.activeInHierarchy)
+        {
+            compass.SetActive(false);
+        }
+
+        else
+        {
+            compass.SetActive(true);
         }
     }
 }

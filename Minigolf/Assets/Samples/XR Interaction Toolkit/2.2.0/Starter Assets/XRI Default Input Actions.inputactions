@@ -786,6 +786,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CompasSpawn",
+                    "type": "Button",
+                    "id": "418d690e-6f25-4143-a83a-0913329d5c72",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -896,6 +905,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "BallRespawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebc4111c-e3e7-4144-89f9-c549f25bf66a",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CompasSpawn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

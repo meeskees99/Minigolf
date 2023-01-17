@@ -7572,6 +7572,8 @@ MonoBehaviour:
   compass: {fileID: 1952408343}
   ball: {fileID: 0}
   lookingForBall: 0
+  compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &1517928578
 GameObject:
   m_ObjectHideFlags: 0
@@ -11433,6 +11435,11 @@ PrefabInstance:
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 190339677}
+    - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
+      propertyPath: playerscript
+      value: 
+      objectReference: {fileID: 1505852426}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
       propertyPath: rightHandRotation

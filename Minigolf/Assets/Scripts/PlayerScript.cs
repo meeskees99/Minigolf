@@ -37,6 +37,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         //compass points to the ball
+        compass.SetActive(lookingForBall);
         if (lookingForBall)
         {
             Vector3 targetDirection = compass.transform.position - ball.transform.position;

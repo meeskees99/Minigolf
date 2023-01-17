@@ -4925,6 +4925,7 @@ MonoBehaviour:
   compass: {fileID: 0}
   ball: {fileID: 0}
   lookingForBall: 0
+  compasActionReference: {fileID: 0}
 --- !u!1001 &423201290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11215,6 +11216,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1016123657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016123659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2016b2e1844e429499b94a696898591c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1016123657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1016123660
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016123659}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8302102485596996044, guid: 4d979d5d983c89f4abe54bb3439a9f60, type: 3}
 --- !u!1001 &1020962896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11671,6 +11692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4438e11fcd1e73a4ca875ba3b316391e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  levelMenu: {fileID: 0}
   dimmedImages:
   - {fileID: 38515484}
   - {fileID: 38515483}
@@ -18673,6 +18696,7 @@ MonoBehaviour:
   compass: {fileID: 0}
   ball: {fileID: 0}
   lookingForBall: 0
+  compasActionReference: {fileID: 0}
 --- !u!1001 &1700966506
 PrefabInstance:
   m_ObjectHideFlags: 0

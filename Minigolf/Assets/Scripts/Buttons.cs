@@ -7,6 +7,9 @@ using System;
 
 public class Buttons : MonoBehaviour
 {
+    [Header("Level selector")]
+    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject levelMenu;
     [Header("LoadingScreen")]
     [SerializeField] Image[] dimmedImages;
     [SerializeField] float dimSpeed;
@@ -25,6 +28,12 @@ public class Buttons : MonoBehaviour
     public void GoToScene(string sceneName)
     {
         StartCoroutine(Transition(sceneName));
+    }
+
+    public void GoToSelectLevel()
+    {
+        mainMenu.SetActive(false);
+        levelMenu.SetActive(true);
     }
 
     public void Quit()

@@ -13,6 +13,7 @@ public class Buttons : MonoBehaviour
     static int currentSelectedLevel;
     [SerializeField] int levels;
     [SerializeField] Sprite[] levelPreviews;
+    [SerializeField] Image previewImage;
     [SerializeField] string[] levelScenes;
     [SerializeField] TextMeshProUGUI levelDisplayName;
     [SerializeField] string[] levelNames;
@@ -49,6 +50,7 @@ public class Buttons : MonoBehaviour
         {
             Buttons.currentSelectedLevel = 0;
         }
+        previewImage.sprite = levelPreviews[Buttons.currentSelectedLevel];
         levelDisplayName.text = levelNames[Buttons.currentSelectedLevel];
     }
 

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2634347960656147090}
   - component: {fileID: 2697099830659700846}
   - component: {fileID: 5410101908803386667}
-  - component: {fileID: 3649009071353481228}
   m_Layer: 0
   m_Name: minos prime
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3649009071353481228
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16472320577688002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.4135879
-  m_Height: 6.4612613
-  m_Direction: 1
-  m_Center: {x: -0.03578174, y: 1.9905875, z: -0.050726533}
 --- !u!1 &2332145778420517038
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104847759146930708}
+  - component: {fileID: 324687744611378514}
   m_Layer: 0
   m_Name: standbeeld (1)
   m_TagString: Untagged
@@ -132,6 +118,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!64 &324687744611378514
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332145778420517038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6939290099271591603, guid: e1e57bba4eff9aa45830266d41d1d875, type: 3}
 --- !u!1 &3723478134586458129
 GameObject:
   m_ObjectHideFlags: 0

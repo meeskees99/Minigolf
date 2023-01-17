@@ -92,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3040299193892457073}
+  - component: {fileID: 3108390703067531516}
   m_Layer: 0
   m_Name: desert cat statue
   m_TagString: Untagged
@@ -117,6 +118,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -69.384, z: 0}
+--- !u!64 &3108390703067531516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412382038115848395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6939290099271591603, guid: 503b564e940d887419679a07a862ab5a, type: 3}
 --- !u!1 &2974453802429184765
 GameObject:
   m_ObjectHideFlags: 0

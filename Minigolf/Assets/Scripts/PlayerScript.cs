@@ -17,7 +17,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] bool lookingForBall;
     [SerializeField] InputActionReference compasActionReference;
     [SerializeField] GameObject raycastGlow;
-    private RaycastHit hit;
+    private RaycastHit checkpointHit;
+    private Vector3 checkpoint;
 
     private void Start()
     {
@@ -50,6 +51,16 @@ public class PlayerScript : MonoBehaviour
             compass.transform.rotation = Quaternion.LookRotation(compassRotation);
             compass.transform.rotation = Quaternion.Euler(0, compass.transform.eulerAngles.y, compass.transform.eulerAngles.z);
         }
+
+        if (Physics.Raycast(playerOrgin.transform.position, -playerOrgin.transform.up, out checkpointHit, 1))
+        {
+            checkpoint = playerOrgin.transform.position;
+            if (checkpointHit.transform.gameObject.tag == "Boundary")
+            {
+                playerOrgin.transform.position = checkpoint;
+            }
+        }
+        //checkpoint systeem voor player
 
         //RaycastInteraction();
     }

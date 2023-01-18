@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465801491}
-  m_IndirectSpecularColor: {r: 0.0034505855, g: 0.0034602392, b: 0.009429775, a: 1}
+  m_IndirectSpecularColor: {r: 0.003223096, g: 0.0034332364, b: 0.010047671, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2677,12 +2677,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e3072c106ca7e459f2b6ad7f4ee463, type: 3}
---- !u!1 &257708551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7192214818420786045, guid: a4302893db115f840971430b34f7dac4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1536015855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263797420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12172,6 +12166,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1062743011}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1068446635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1580438429}
+    m_Modifications:
+    - target: {fileID: 7192214818420786045, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_Name
+      value: Compass
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4302893db115f840971430b34f7dac4, type: 3}
+--- !u!1 &1068446636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7192214818420786045, guid: a4302893db115f840971430b34f7dac4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1068446635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1068815569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17492,6 +17561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Compass
       objectReference: {fileID: 0}
+    - target: {fileID: 7192214818420786045, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
         type: 3}
       propertyPath: m_RootOrder
@@ -17984,6 +18058,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+--- !u!4 &1580438429 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9014170783809206335, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1580438428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1585929719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18800,7 +18880,7 @@ MonoBehaviour:
   playerOrgin: {fileID: 1046272688}
   cam: {fileID: 330066323}
   heightOffset: {x: 0, y: 0.99, z: 0}
-  compass: {fileID: 257708551}
+  compass: {fileID: 1068446636}
   ball: {fileID: 0}
   lookingForBall: 0
   compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,

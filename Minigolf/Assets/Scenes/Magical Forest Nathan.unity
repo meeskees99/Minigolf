@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465801491}
-  m_IndirectSpecularColor: {r: 0.003223096, g: 0.0034332364, b: 0.010047671, a: 1}
+  m_IndirectSpecularColor: {r: 0.0034505855, g: 0.0034602392, b: 0.009429775, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1176,7 +1176,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -2677,6 +2677,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e3072c106ca7e459f2b6ad7f4ee463, type: 3}
+--- !u!1 &257708551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7192214818420786045, guid: a4302893db115f840971430b34f7dac4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1536015855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263797420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4926,6 +4932,7 @@ MonoBehaviour:
   ball: {fileID: 0}
   lookingForBall: 0
   compasActionReference: {fileID: 0}
+  raycastGlow: {fileID: 0}
 --- !u!1001 &423201290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6990,8 +6997,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigolf hole stick
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e1039f40214554d9901f67dbef90b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: flag
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e1039f40214554d9901f67dbef90b5, type: 3}
+--- !u!1 &623013323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 21e1039f40214554d9901f67dbef90b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 623013322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &623013324
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623013323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6239881831769578202, guid: 21e1039f40214554d9901f67dbef90b5, type: 3}
 --- !u!1001 &628178391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11694,6 +11726,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 0}
   levelMenu: {fileID: 0}
+  levels: 0
+  levelPreviews: []
+  previewImage: {fileID: 0}
+  levelScenes: []
+  levelDisplayName: {fileID: 0}
+  levelNames: []
   dimmedImages:
   - {fileID: 38515484}
   - {fileID: 38515483}
@@ -17442,6 +17480,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2243265000995969874, guid: 46361260054102144a4678c803d79e5b, type: 3}
+--- !u!1001 &1536015855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7192214818420786045, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_Name
+      value: Compass
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.791
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.352
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531199357475215815, guid: a4302893db115f840971430b34f7dac4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4302893db115f840971430b34f7dac4, type: 3}
 --- !u!1001 &1545247964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18693,10 +18800,12 @@ MonoBehaviour:
   playerOrgin: {fileID: 1046272688}
   cam: {fileID: 330066323}
   heightOffset: {x: 0, y: 0.99, z: 0}
-  compass: {fileID: 0}
+  compass: {fileID: 257708551}
   ball: {fileID: 0}
   lookingForBall: 0
-  compasActionReference: {fileID: 0}
+  compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  raycastGlow: {fileID: 0}
 --- !u!1001 &1700966506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22464,14 +22573,30 @@ PrefabInstance:
       objectReference: {fileID: 663558423}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
+      propertyPath: clubForce
+      value: 1400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1046272688}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
+      propertyPath: playerscript
+      value: 
+      objectReference: {fileID: 1687485545}
+    - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
       propertyPath: rightHandRotation
       value: 
       objectReference: {fileID: 633811543}
+    - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
+      propertyPath: clubActionReference
+      value: 
+      objectReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
       propertyPath: rightHandObjects.Array.data[0]

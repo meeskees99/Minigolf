@@ -1185,6 +1185,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4438e11fcd1e73a4ca875ba3b316391e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  levelMenu: {fileID: 0}
+  levels: 0
+  levelPreviews: []
+  previewImage: {fileID: 0}
+  levelScenes: []
+  levelDisplayName: {fileID: 0}
+  levelNames: []
   dimmedImages:
   - {fileID: 775036373}
   - {fileID: 1080635481}
@@ -1293,6 +1301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputName: {fileID: 1605172276}
   errorMessage: {fileID: 1021981070}
+  loader: {fileID: 134930617}
 --- !u!1 &146102197
 GameObject:
   m_ObjectHideFlags: 0
@@ -11190,6 +11199,8 @@ MonoBehaviour:
   compass: {fileID: 0}
   ball: {fileID: 0}
   lookingForBall: 0
+  compasActionReference: {fileID: 0}
+  raycastGlow: {fileID: 0}
 --- !u!1 &1652385133
 GameObject:
   m_ObjectHideFlags: 0

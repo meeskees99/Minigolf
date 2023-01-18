@@ -15,7 +15,7 @@ public class AnimatedImage : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > animationLenght / sprites.Length - 1)
+        if (timer > animationLenght / sprites.Length)
         {
             index++;
             timer = 0;

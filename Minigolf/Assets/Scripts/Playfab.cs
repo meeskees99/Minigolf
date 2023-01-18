@@ -14,15 +14,17 @@ public class Playfab : MonoBehaviour
     static public string id;
     [SerializeField] TextMeshProUGUI inputName;
     [SerializeField] TextMeshProUGUI errorMessage;
+    [SerializeField] Buttons loader;
 
     // Start is called before the first frame update
     void Start()
     {
         inputName.text = $"Logging in..";
         errorMessage.text = $"";
+        Debug.Log($"Trying to log in as {SystemInfo.deviceUniqueIdentifier}");
         var request = new LoginWithCustomIDRequest
         {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
+            CustomId = $"DEVICE{SystemInfo.deviceUniqueIdentifier}",
             CreateAccount = true,
             InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
             {
@@ -51,7 +53,7 @@ public class Playfab : MonoBehaviour
         else
         {
             username = name;
-            SceneManager.LoadScene("MainMenu");
+            loader.GoToScene("MainMenu");
         }
     }
 

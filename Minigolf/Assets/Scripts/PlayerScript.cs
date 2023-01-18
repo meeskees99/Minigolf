@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] GameObject raycastGlow;
     private RaycastHit checkpointHit;
     private Vector3 checkpoint;
+    private RaycastHit hit;
+    public GameObject[] interactableObjects;
 
     private void Start()
     {
@@ -62,7 +64,7 @@ public class PlayerScript : MonoBehaviour
         }
         //checkpoint systeem voor player
 
-        //RaycastInteraction();
+        RaycastInteraction();
     }
 
     private void Compas(InputAction.CallbackContext obj)
@@ -79,19 +81,22 @@ public class PlayerScript : MonoBehaviour
     }
 
     
-    //private void RaycastInteraction()
-    //{
-        //if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 100))
-       // {
-       //     if(hit.transform.gameObject.tag == "insideObstacle")
-       //     {
-       //         hit.transform.gameObject.GetComponent<Light>().enabled = true;
-       //     }
-      //  }
+    private void RaycastInteraction()
+    {
+        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 10000))
+        {
+            if(hit.transform.gameObject.tag == "insideObstacle")
+            {
+                hit.transform.gameObject.GetComponent<Outline>().enabled = true;
+            }
 
-     //   else
-     //   {
-     //       hit.transform.gameObject.GetComponent<Light>().enabled = false;
-     //   }
-   // }
+            else
+            {
+                for (int i = 0; i < interactableObjects.Length; i++)
+                {
+                    interactableObjects[i].transform.gameObject.GetComponent<Outline>().enabled = false;
+                }
+            }
+        }
+    }
 }

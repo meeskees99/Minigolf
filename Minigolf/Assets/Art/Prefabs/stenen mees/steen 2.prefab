@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9028736187697580983}
   - component: {fileID: 5396253727481054226}
   - component: {fileID: 7856440924815110360}
+  - component: {fileID: 7441366249631200906}
   m_Layer: 0
   m_Name: steen 2
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &7441366249631200906
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504857772798349581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39878058
+  m_Center: {x: 0.0015155375, y: 0.30915207, z: 0.0060384125}

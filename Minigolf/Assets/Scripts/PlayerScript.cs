@@ -69,12 +69,12 @@ public class PlayerScript : MonoBehaviour
     {
         if(compass.activeInHierarchy)
         {
-            compass.SetActive(false);
+            lookingForBall = false;
         }
 
         else
         {
-            compass.SetActive(true);
+            lookingForBall = true;
         }
     }
 

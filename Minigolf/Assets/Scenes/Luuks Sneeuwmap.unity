@@ -4686,8 +4686,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.223
+      value: 7.249
       objectReference: {fileID: 0}
     - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
         type: 3}
@@ -4697,7 +4712,7 @@ PrefabInstance:
     - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.463
+      value: 46.466
       objectReference: {fileID: 0}
     - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
         type: 3}
@@ -4733,6 +4748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.622
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234993387671961638, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12b0567c0e2c81e40af0bd8bf42f1ed7, type: 3}
@@ -7154,6 +7174,7 @@ MonoBehaviour:
   lookingForBall: 0
   compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  raycastGlow: {fileID: 0}
 --- !u!1 &1517928578
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ TagManager:
   - logCheckpoint
   - golfBall
   - insideObstacle
+  - hands
+  - canon
   layers:
   - Default
   - TransparentFX

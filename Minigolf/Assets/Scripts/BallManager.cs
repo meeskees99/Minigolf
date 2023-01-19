@@ -24,6 +24,7 @@ public class BallManager : MonoBehaviour
     [SerializeField] string targetLeaderboard;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
+    public float canonSpeed;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -107,6 +108,12 @@ public class BallManager : MonoBehaviour
         {
             gameObject.GetComponent<XRGrabInteractable>().enabled = true;
             //kan bal pakken, nu kan de bal altijd gepakken worden
+        }
+
+        if(collision.gameObject.tag == "canon")
+        {
+            transform.position = collision.transform.position + new Vector3(-1, 1, -1);
+            GetComponent<Rigidbody>().AddForce(collision.transform.forward * canonSpeed);
         }
     }
 

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlankScript : MonoBehaviour
 {
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    private void OnTriggerStay(Collider collision)
+    void Update()
     {
-        if(collision.gameObject.tag == "hands")
+        if(Vector3.Distance(transform.position, player.position) < 3)
         {
-            GetComponent<Rigidbody>().useGravity = true;
-            GetComponent<Rigidbody>().freezeRotation = false;
+            GetComponent<Rigidbody>().isKinematic = false;
             print("hoi");
         }
     }

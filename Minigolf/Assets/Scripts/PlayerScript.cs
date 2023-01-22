@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour
             compass.transform.rotation = Quaternion.Euler(0, compass.transform.eulerAngles.y, compass.transform.eulerAngles.z);
         }
 
-        if (Physics.Raycast(playerOrgin.transform.position, -playerOrgin.transform.up, out checkpointHit, 1))
+        if (Physics.Raycast(playerOrgin.transform.position, -playerOrgin.transform.up, out checkpointHit, 1) && checkpointHit.transform.gameObject.tag != "Boundary")
         {
             checkpoint = playerOrgin.transform.position;
             if (checkpointHit.transform.gameObject.tag == "Boundary")

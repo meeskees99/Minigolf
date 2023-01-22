@@ -133,7 +133,7 @@ MonoBehaviour:
   rollAudio: {fileID: 56037851125421909}
   nextScene: NathansScene
   targetLeaderboard: HitsTest
-  canonSpeed: 300
+  canonSpeed: 600
 --- !u!23 &808646429063288539
 MeshRenderer:
   m_ObjectHideFlags: 0

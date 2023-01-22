@@ -12,6 +12,7 @@ public class BallManager : MonoBehaviour
     public GameObject ballRespawn;
     public Vector3 checkpoint;
     private GameObject club;
+    private RaycastHit checkpointHit;
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
@@ -61,17 +62,17 @@ public class BallManager : MonoBehaviour
             
             Vector3 newSpeed = GetComponent<Rigidbody>().velocity;
             //kijken of de bal slomer gaat
-
-            if(oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z)
+            if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 2))
             {
-                GetComponent<Rigidbody>().drag = 4000;
-                GetComponent<Rigidbody>().angularDrag = 4000;
-                //stopt de bal als het heel langzaam gaat
-                print("hallo");
+                if (hit.transform.gameObject.tag == "map" && oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z)
+                {
+                    GetComponent<Rigidbody>().drag = 4000;
+                    GetComponent<Rigidbody>().angularDrag = 4000;
+                    //stopt de bal als het heel langzaam gaat
+                    print("hallo");
+                }
             }
             oldSpeed = GetComponent<Rigidbody>().velocity;
-
-
             //GetComponent<Rigidbody>().drag = 4000;
             //GetComponent<Rigidbody>().angularDrag = 4000;
         }
@@ -164,7 +165,7 @@ public class BallManager : MonoBehaviour
 
     void Update()
     {
-        if (Physics.Raycast(raycastCube.transform.position, -raycastCube.transform.up, out hit, 1) && ballRolling == false)
+        if (Physics.Raycast(raycastCube.transform.position, -raycastCube.transform.up, out checkpointHit, 1) && ballRolling == false)
         {
             checkpoint = transform.position;
         }

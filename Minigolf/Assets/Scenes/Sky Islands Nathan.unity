@@ -12145,6 +12145,12 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 6247650650340037589}
   - {fileID: 807908366}
+--- !u!4 &1812139745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1812139736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1822408127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15180,7 +15186,7 @@ PrefabInstance:
     - target: {fileID: 1636230915554365460, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
@@ -15205,37 +15211,37 @@ PrefabInstance:
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94117886
+      value: 0.9398256
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.013738385
+      value: -0.052290183
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.33737534
+      value: 0.33655548
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.013094971
+      value: 0.026907401
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -1.988
+      value: -6.684
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 39.426
+      value: 39.354
       objectReference: {fileID: 0}
     - target: {fileID: 5854297260280954086, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.882
+      value: 0.887
       objectReference: {fileID: 0}
     - target: {fileID: 6518244660734256732, guid: c101d30abaeb83e47a9308b000c85332,
         type: 3}
@@ -15266,10 +15272,10 @@ Rigidbody:
   m_Mass: 0.4
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &6247650650340037591
 MonoBehaviour:
@@ -15307,6 +15313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a9ccc14835538458e0f5a8cd11683e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1812139745}
 --- !u!1001 &6584150635942892760
 PrefabInstance:
   m_ObjectHideFlags: 0

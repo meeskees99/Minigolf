@@ -22,6 +22,7 @@ public class BallManager : MonoBehaviour
     private bool rollSoundTriggered;
     [SerializeField] string nextScene;
     [SerializeField] string targetLeaderboard;
+    private Vector3 oldSpeed;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
     public float canonSpeed;
@@ -58,18 +59,18 @@ public class BallManager : MonoBehaviour
         if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false && insideObstacle == false)
         {
             
-            Vector3 oldSpeed = GetComponent<Rigidbody>().velocity;
             Vector3 newSpeed = GetComponent<Rigidbody>().velocity;
             //kijken of de bal slomer gaat
 
-            if(oldSpeed.x + oldSpeed.y + oldSpeed.z > newSpeed.x + newSpeed.z + newSpeed.y)
+            if(oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z)
             {
                 GetComponent<Rigidbody>().drag = 4000;
                 GetComponent<Rigidbody>().angularDrag = 4000;
                 //stopt de bal als het heel langzaam gaat
-                print("hoi");
+                print("hallo");
             }
-            
+            oldSpeed = GetComponent<Rigidbody>().velocity;
+
 
             //GetComponent<Rigidbody>().drag = 4000;
             //GetComponent<Rigidbody>().angularDrag = 4000;

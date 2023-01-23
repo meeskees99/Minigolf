@@ -5785,7 +5785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814863143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.37, y: 16.25, z: -16.57}
+  m_LocalPosition: {x: 5.423, y: 16.25, z: -16.461}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7606,7 +7606,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -8730,7 +8730,7 @@ PrefabInstance:
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
       propertyPath: clubForce
-      value: 1400
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
@@ -8751,7 +8751,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clubActionReference
       value: 
-      objectReference: {fileID: 2938908124991542665, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+      objectReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
         type: 3}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
@@ -11980,7 +11980,7 @@ PrefabInstance:
     - target: {fileID: 4134505312059479865, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.37
+      value: 19.56
       objectReference: {fileID: 0}
     - target: {fileID: 4134505312059479865, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -11990,7 +11990,7 @@ PrefabInstance:
     - target: {fileID: 4134505312059479865, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.73
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 4134505312059479865, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}

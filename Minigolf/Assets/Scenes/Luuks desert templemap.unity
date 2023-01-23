@@ -1475,7 +1475,7 @@ PrefabInstance:
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
       propertyPath: clubForce
-      value: 1600
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}

@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class BallManager : MonoBehaviour
 {
@@ -21,17 +20,13 @@ public class BallManager : MonoBehaviour
     private bool insideLog;
     private bool insideObstacle;
     [SerializeField] AudioSource rollAudio;
-    [SerializeField] GameObject confetti;
     private bool rollSoundTriggered;
+    [SerializeField] string nextScene;
     [SerializeField] string targetLeaderboard;
     private Vector3 oldSpeed;
     //private Transform oldPreviousTransform;
     //private Transform oldNewTransform;
     public float canonSpeed;
-    [SerializeField] float waitTimeForNextScene;
-    public Image[] dimmedImages;
-    public float dimSpeed;
-    public float loadTime;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -98,11 +93,9 @@ public class BallManager : MonoBehaviour
     {
         if(collision.gameObject.tag == "Boundary")
         {
-            //ballRespawn = Instantiate(ballRespawn, checkpoint, Quaternion.identity);
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            gameObject.transform.position = checkpoint;
-            //club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
-            //Destroy(gameObject);
+            ballRespawn = Instantiate(ballRespawn, checkpoint, Quaternion.identity);
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
+            Destroy(gameObject);
             //respawn
         }
 
@@ -164,9 +157,7 @@ public class BallManager : MonoBehaviour
         if(collision.gameObject.tag == "flag")
         {
             //ga naar andere scene
-            StartCoroutine(Transition("MainMenu", waitTimeForNextScene));
-            Instantiate(confetti, collision.transform);
-            //SceneManager.LoadScene(nextScene);
+            SceneManager.LoadScene(nextScene);
             SendLeaderboard(GolfHitScript.ballHitCounter);
             GolfHitScript.ballHitCounter = 0;
         }
@@ -210,25 +201,5 @@ public class BallManager : MonoBehaviour
     {
         Debug.Log("Error while sending leaderboard!");
         Debug.Log(error.GenerateErrorReport());
-    }
-
-    IEnumerator Transition(string sceneName, float waitTime)
-    {
-        foreach (Image dimmedImage in dimmedImages)
-        {
-            var tempColor = dimmedImage.color;
-            tempColor.a += dimSpeed * Time.deltaTime;
-            dimmedImage.color = tempColor;
-        }
-        yield return new WaitForEndOfFrame();
-        if (dimmedImages[0].color.a < 1)
-        {
-            StartCoroutine(Transition(sceneName, 0));
-        }
-        else
-        {
-            yield return new WaitForSeconds(loadTime);
-            SceneManager.LoadScene(sceneName);
-        }
     }
 }

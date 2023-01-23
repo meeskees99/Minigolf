@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GolfHitScript : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class GolfHitScript : MonoBehaviour
     public float clubForce;
     public Transform spawn;
 
+    [SerializeField] Image[] dimmedImages;
+    [SerializeField] float dimSpeed;
+    [SerializeField] float loadTime;
+
+
     [SerializeField] PlayerScript playerscript;
 
     public float clubSpeed;
@@ -37,6 +43,9 @@ public class GolfHitScript : MonoBehaviour
         ballSpawnActionReference.action.performed += RespawnBall;
         instantiatedGolfBall = Instantiate(golfBall, spawn.position, Quaternion.identity);
         playerscript.ball = instantiatedGolfBall;
+        instantiatedGolfBall.GetComponent<BallManager>().dimmedImages = dimmedImages;
+        instantiatedGolfBall.GetComponent<BallManager>().dimSpeed = dimSpeed;
+        instantiatedGolfBall.GetComponent<BallManager>().loadTime = loadTime;
         //disable collision between player and golf stick
         Physics.IgnoreCollision(clubCollider.GetComponent<BoxCollider>(), playerBody.GetComponent<CharacterController>());
     }

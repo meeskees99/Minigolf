@@ -103,6 +103,10 @@ public class BallManager : MonoBehaviour
             //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             //gameObject.transform.position = checkpoint;
             club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
+            club.GetComponent<GolfHitScript>().playerscript.ball = club.GetComponent<GolfHitScript>().instantiatedGolfBall;
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().dimmedImages = dimmedImages;
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().dimSpeed = dimSpeed;
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().loadTime = loadTime;
             //Destroy(gameObject);
             Destroy(gameObject);
             //respawn

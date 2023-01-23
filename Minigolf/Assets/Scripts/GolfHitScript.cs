@@ -28,7 +28,7 @@ public class GolfHitScript : MonoBehaviour
     [SerializeField] float loadTime;
 
 
-    [SerializeField] PlayerScript playerscript;
+    public PlayerScript playerscript;
 
     public float clubSpeed;
     public float dist;

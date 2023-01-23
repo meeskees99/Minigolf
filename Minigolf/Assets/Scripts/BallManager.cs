@@ -99,10 +99,10 @@ public class BallManager : MonoBehaviour
     {
         if(collision.gameObject.tag == "Boundary")
         {
-            //ballRespawn = Instantiate(ballRespawn, checkpoint, Quaternion.identity);
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            gameObject.transform.position = checkpoint;
-            //club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
+            ballRespawn = Instantiate(ballRespawn, checkpoint, Quaternion.identity);
+            //GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            //gameObject.transform.position = checkpoint;
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall = ballRespawn;
             //Destroy(gameObject);
             Destroy(gameObject);
             //respawn

@@ -131,9 +131,22 @@ MonoBehaviour:
   ballRolling: 0
   mushroomBounceSpeed: 40
   rollAudio: {fileID: 56037851125421909}
+<<<<<<< Updated upstream
   nextScene: MainMenu
+=======
+<<<<<<< HEAD
+  confetti: {fileID: 1748969954556490795, guid: efae972b3c3ddf444b85943b9c1629db,
+    type: 3}
+=======
+  nextScene: MainMenu
+>>>>>>> e1554ec5804fcfc87cdf4ef302664d0c4601e9f0
+>>>>>>> Stashed changes
   targetLeaderboard: HitsTest
   canonSpeed: 600
+  waitTimeForNextScene: 5
+  dimmedImages: []
+  dimSpeed: 0
+  loadTime: 0
 --- !u!23 &808646429063288539
 MeshRenderer:
   m_ObjectHideFlags: 0

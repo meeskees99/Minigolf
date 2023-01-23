@@ -2374,7 +2374,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -10832,6 +10832,11 @@ PrefabInstance:
       objectReference: {fileID: 1028389611}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
+      propertyPath: clubForce
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 190339677}
@@ -10845,6 +10850,12 @@ PrefabInstance:
       propertyPath: rightHandRotation
       value: 
       objectReference: {fileID: 1917538762}
+    - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
+      propertyPath: clubActionReference
+      value: 
+      objectReference: {fileID: -3173968252899772637, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
     - target: {fileID: 1038744409855740463, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
       propertyPath: rightHandObjects.Array.data[0]

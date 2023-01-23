@@ -131,7 +131,7 @@ MonoBehaviour:
   ballRolling: 0
   mushroomBounceSpeed: 40
   rollAudio: {fileID: 56037851125421909}
-  nextScene: NathansScene
+  nextScene: MainMenu
   targetLeaderboard: HitsTest
   canonSpeed: 600
 --- !u!23 &808646429063288539

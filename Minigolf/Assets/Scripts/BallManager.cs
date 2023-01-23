@@ -69,10 +69,11 @@ public class BallManager : MonoBehaviour
             //kijken of de bal slomer gaat
             if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 2))
             {
+                GetComponent<Rigidbody>().drag = 4000;
+                GetComponent<Rigidbody>().angularDrag = 4000;
                 if (hit.transform.gameObject.tag == "map" && oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z)
                 {
-                    GetComponent<Rigidbody>().drag = 4000;
-                    GetComponent<Rigidbody>().angularDrag = 4000;
+                    
                     //stopt de bal als het heel langzaam gaat
                     print("hallo");
                 }

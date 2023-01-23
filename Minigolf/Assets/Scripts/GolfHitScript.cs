@@ -145,14 +145,14 @@ public class GolfHitScript : MonoBehaviour
         {
             if(hit.point.y + 0.01f < clubCollider.transform.position.y && shaft.localScale.y < 2)
             {
-                stickLengthValue += 0.01f;
+                stickLengthValue += 0.03f;
                 shaft.localScale = new Vector3(1, stickLengthValue, 1);
             }
         }
 
         else if(shaft.localScale.y > 1)
         {
-            stickLengthValue -= 0.01f;
+            stickLengthValue -= 0.03f;
             shaft.localScale = new Vector3(1, stickLengthValue, 1);
         }
     }

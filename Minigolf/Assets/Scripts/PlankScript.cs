@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlankScript : MonoBehaviour
 {
     public Transform player;
+    public Transform plankRotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,8 @@ public class PlankScript : MonoBehaviour
     {
         if(Vector3.Distance(transform.position, player.position) < 3)
         {
-            GetComponent<Rigidbody>().isKinematic = false;
+            transform.rotation = Quaternion.Lerp(transform.rotation, plankRotation.rotation, Time.deltaTime);
+            
             print("hoi");
         }
     }

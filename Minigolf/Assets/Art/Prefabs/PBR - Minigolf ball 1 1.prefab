@@ -125,15 +125,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cac6ffa2ba01ce49b8d8f01a76444f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  build: 0
   ballRespawn: {fileID: 7565241609907295638}
   checkpoint: {x: 0, y: 0, z: 0}
   raycastCube: {fileID: 3488468840066709824}
   ballRolling: 0
   mushroomBounceSpeed: 40
   rollAudio: {fileID: 56037851125421909}
-  nextScene: MainMenu
+  confetti: {fileID: 1748969954556490795, guid: efae972b3c3ddf444b85943b9c1629db,
+    type: 3}
   targetLeaderboard: HitsTest
   canonSpeed: 600
+  waitTimeForNextScene: 0
+  dimmedImages: []
+  dimSpeed: 0
+  loadTime: 0
 --- !u!23 &808646429063288539
 MeshRenderer:
   m_ObjectHideFlags: 0

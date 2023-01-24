@@ -220,6 +220,7 @@ public class BallManager : MonoBehaviour
 
     IEnumerator Transition(string sceneName, float waitTime)
     {
+        yield return new WaitForSeconds(waitTime);
         foreach (Image dimmedImage in dimmedImages)
         {
             var tempColor = dimmedImage.color;

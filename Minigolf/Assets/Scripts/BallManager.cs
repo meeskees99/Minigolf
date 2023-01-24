@@ -172,9 +172,9 @@ public class BallManager : MonoBehaviour
         if(collision.gameObject.tag == "flag")
         {
             //ga naar andere scene
-            StartCoroutine(Transition("MainMenu", waitTimeForNextScene));
+            //StartCoroutine(Transition("MainMenu", waitTimeForNextScene));
             Instantiate(confetti, collision.transform);
-            //SceneManager.LoadScene(nextScene);
+            SceneManager.LoadScene("MainMenu");
             if (build)
             {
                 SendLeaderboard(GolfHitScript.ballHitCounter);

@@ -50,7 +50,7 @@ public class PlayerScript : MonoBehaviour
 
         //compass points to the ball
         compass.SetActive(lookingForBall);
-        //hitsPaper.SetActive(!lookingForBall);
+        hitsPaper.SetActive(!lookingForBall);
         if (lookingForBall)
         {
             Vector3 targetDirection = compass.transform.position - ball.transform.position;
@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
         else
         {
             Debug.Log(GolfHitScript.ballHitCounter);
-            //hitsDisplay.text = GolfHitScript.ballHitCounter.ToString();
+            hitsDisplay.text = GolfHitScript.ballHitCounter.ToString();
         }
 
         if (Physics.Raycast(playerOrgin.transform.position, -playerOrgin.transform.up, out checkpointHit, 1) && checkpointHit.transform.gameObject.tag != "Boundary")

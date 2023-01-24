@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class PlayerScript : MonoBehaviour
     private Vector3 checkpoint;
     private RaycastHit hit;
     public GameObject[] interactableObjects;
+    [Header("Display amount of hits")]
+    [SerializeField] GameObject hitsPaper;
+    [SerializeField] TextMeshProUGUI hitsDisplay;
 
     private void Start()
     {
@@ -46,12 +50,17 @@ public class PlayerScript : MonoBehaviour
 
         //compass points to the ball
         compass.SetActive(lookingForBall);
+        hitsPaper.SetActive(!lookingForBall);
         if (lookingForBall)
         {
             Vector3 targetDirection = compass.transform.position - ball.transform.position;
             Vector3 compassRotation = Vector3.RotateTowards(compass.transform.forward, targetDirection, 180 * Time.deltaTime, 0.0f);
             compass.transform.rotation = Quaternion.LookRotation(compassRotation);
             compass.transform.rotation = Quaternion.Euler(0, compass.transform.eulerAngles.y, compass.transform.eulerAngles.z);
+        }
+        else
+        {
+            hitsDisplay.text = GolfHitScript.ballHitCounter.ToString();
         }
 
         if (Physics.Raycast(playerOrgin.transform.position, -playerOrgin.transform.up, out checkpointHit, 1) && checkpointHit.transform.gameObject.tag != "Boundary")

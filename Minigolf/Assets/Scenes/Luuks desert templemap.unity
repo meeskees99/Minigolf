@@ -2599,6 +2599,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 686492509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &694564515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 917361249}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.76
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a19e0689323c2347b29a33f0057d9e8, type: 2}
+    - target: {fileID: 919132149155446097, guid: 911828e6b57af0149bc12ea330139a29,
+        type: 3}
+      propertyPath: m_Name
+      value: desert temple pillar (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 911828e6b57af0149bc12ea330139a29, type: 3}
+--- !u!1 &694564516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 911828e6b57af0149bc12ea330139a29,
+    type: 3}
+  m_PrefabInstance: {fileID: 694564515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &694564517
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694564516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1260826959733395714, guid: 911828e6b57af0149bc12ea330139a29, type: 3}
 --- !u!1001 &717759613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4076,7 +4170,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.006230533
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 911828e6b57af0149bc12ea330139a29,
         type: 3}
@@ -6456,6 +6550,8 @@ MonoBehaviour:
     type: 3}
   raycastGlow: {fileID: 0}
   interactableObjects: []
+  hitsPaper: {fileID: 0}
+  hitsDisplay: {fileID: 0}
 --- !u!1 &2033462030
 GameObject:
   m_ObjectHideFlags: 0

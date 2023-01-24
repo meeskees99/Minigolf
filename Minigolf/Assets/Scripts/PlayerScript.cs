@@ -100,7 +100,15 @@ public class PlayerScript : MonoBehaviour
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
             }
 
-            if(hit.transform.gameObject.tag == "canon")
+            else
+            {
+                for (int i = 0; i < interactableObjects.Length; i++)
+                {
+                    interactableObjects[i].transform.gameObject.GetComponent<Outline>().enabled = false;
+                }
+            }
+
+            if (hit.transform.gameObject.tag == "canon")
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
             }

@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 
 public class BallManager : MonoBehaviour
 {
+    public bool build;
+    [Space(20)]
     public GameObject ballRespawn;
     public Vector3 checkpoint;
     private GameObject club;
@@ -173,7 +175,10 @@ public class BallManager : MonoBehaviour
             StartCoroutine(Transition("MainMenu", waitTimeForNextScene));
             Instantiate(confetti, collision.transform);
             //SceneManager.LoadScene(nextScene);
-            SendLeaderboard(GolfHitScript.ballHitCounter);
+            if (build)
+            {
+                SendLeaderboard(GolfHitScript.ballHitCounter);
+            }
             GolfHitScript.ballHitCounter = 0;
         }
     }

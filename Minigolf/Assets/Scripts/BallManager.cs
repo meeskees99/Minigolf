@@ -67,7 +67,7 @@ public class BallManager : MonoBehaviour
 
         if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false && insideObstacle == false && angle > -20)
         {
-            if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 1))
+            if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 0.2f))
             {
                 if(hit.transform.gameObject.tag == "map")
                 {
@@ -79,7 +79,7 @@ public class BallManager : MonoBehaviour
         }
 
         Vector3 newSpeed = GetComponent<Rigidbody>().velocity;
-        if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 1))
+        if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 0.2f))
         {
             if (hit.transform.gameObject.tag == "map" && oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z && ballSpeed.x < 0.09f && ballSpeed.z < 0.09f && ballRolling && insideLog == false && insideObstacle == false && angle > -20)
             {

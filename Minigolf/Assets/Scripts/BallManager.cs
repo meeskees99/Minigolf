@@ -34,6 +34,7 @@ public class BallManager : MonoBehaviour
     public Image[] dimmedImages;
     public float dimSpeed;
     public float loadTime;
+    public float angle;
     void Start()
     {
         club = GameObject.Find("Putter");
@@ -64,15 +65,15 @@ public class BallManager : MonoBehaviour
             }
         }
 
-        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false && insideObstacle == false)
+        if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false && insideObstacle == false && angle < 20)
         {
             
             Vector3 newSpeed = GetComponent<Rigidbody>().velocity;
             //kijken of de bal slomer gaat
             if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 2))
             {
-                GetComponent<Rigidbody>().drag = 4000;
-                GetComponent<Rigidbody>().angularDrag = 4000;
+                GetComponent<Rigidbody>().drag = 40000;
+                GetComponent<Rigidbody>().angularDrag = 40000;
                 if (hit.transform.gameObject.tag == "map" && oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z)
                 {
                     
@@ -148,7 +149,7 @@ public class BallManager : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(dir * Time.deltaTime);
         }
 
-        if(collision.gameObject.tag == "insideObstacle")
+        if (collision.gameObject.tag == "insideObstacle")
         {
             GetComponent<Rigidbody>().drag = 0;
             GetComponent<Rigidbody>().angularDrag = 0;
@@ -189,6 +190,13 @@ public class BallManager : MonoBehaviour
         {
             checkpoint = transform.position;
         }
+
+        if (Physics.Raycast(raycastCube.transform.position, -raycastCube.transform.up, out checkpointHit, 1))
+        {
+            angle = Vector3.Angle(-Vector3.up, checkpointHit.normal) - 180;
+            print("hoiii");
+        }
+
         //checkpoint
         if (insideLog == false && insideObstacle == false)
         {

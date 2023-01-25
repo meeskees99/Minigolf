@@ -36,6 +36,8 @@ public class GolfHitScript : MonoBehaviour
     public Transform shaft;
 
     static public int ballHitCounter;
+    private bool ballCooldown;
+    private float ballCooldownTimer;
 
     void Start()
     {
@@ -65,6 +67,10 @@ public class GolfHitScript : MonoBehaviour
             clubCollider.SetActive(true);
         }
         //kijken of bal rolt
+
+        
+            
+        
     }
 
     void FixedUpdate()
@@ -120,7 +126,8 @@ public class GolfHitScript : MonoBehaviour
 
     void clubCollision()
     {
-        if(ballRolling == false)
+        ballCooldownTimer += Time.deltaTime;
+        if (ballRolling == false)
         {
             clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
             oldClubPosition = clubCollider.transform.position;
@@ -130,7 +137,12 @@ public class GolfHitScript : MonoBehaviour
                 instantiatedGolfBall.transform.GetComponent<Rigidbody>().isKinematic = false;
                 Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
                 instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
-                ballHitCounter++;
+                if(ballCooldownTimer > 1)
+                {
+                    ballHitCounter++;
+                    ballCooldownTimer = 0;
+                }
+ 
                 if (direction.x + direction.y + direction.z > 0)
                 {
                     //instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);

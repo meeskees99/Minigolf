@@ -67,22 +67,23 @@ public class BallManager : MonoBehaviour
 
         if (ballSpeed.x < 0.04f && ballSpeed.z < 0.04f && ballRolling && insideLog == false && insideObstacle == false && angle > -20)
         {
-            if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 2))
+            if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 1))
             {
-                GetComponent<Rigidbody>().isKinematic = true;
+                if(hit.transform.gameObject.tag == "map")
+                {
+                    GetComponent<Rigidbody>().isKinematic = true;
+                }
             }
-            oldSpeed = GetComponent<Rigidbody>().velocity;
             //GetComponent<Rigidbody>().drag = 4000;
             //GetComponent<Rigidbody>().angularDrag = 4000;
         }
 
         Vector3 newSpeed = GetComponent<Rigidbody>().velocity;
-        if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 2))
+        if (Physics.Raycast(transform.position, -raycastCube.transform.up, out hit, 1))
         {
             if (hit.transform.gameObject.tag == "map" && oldSpeed.x + oldSpeed.z > newSpeed.x + newSpeed.z && ballSpeed.x < 0.09f && ballSpeed.z < 0.09f && ballRolling && insideLog == false && insideObstacle == false && angle > -20)
             {
                 GetComponent<Rigidbody>().isKinematic = true;
-                print("hallo");
             }
         }
         oldSpeed = GetComponent<Rigidbody>().velocity;

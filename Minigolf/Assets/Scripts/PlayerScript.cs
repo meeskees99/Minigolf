@@ -94,21 +94,8 @@ public class PlayerScript : MonoBehaviour
     private void RaycastInteraction()
     {
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 10000))
-        {
-            if(hit.transform.gameObject.tag == "insideObstacle")
-            {
-                hit.transform.gameObject.GetComponent<Outline>().enabled = true;
-            }
-
-            else
-            {
-                for (int i = 0; i < interactableObjects.Length; i++)
-                {
-                    interactableObjects[i].transform.gameObject.GetComponent<Outline>().enabled = false;
-                }
-            }
-
-            if (hit.transform.gameObject.tag == "canon")
+        { 
+            if (hit.transform.gameObject.tag == "insideObstacle")
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
             }

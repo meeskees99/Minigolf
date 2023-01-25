@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: temple pillars
+  m_Name: temple pillars 1
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
   - _METALLICSPECGLOSSMAP
@@ -37,11 +37,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: ab6971e7f3f975a43ad3b4ff4fb049e9, type: 3}
+        m_Texture: {fileID: 2800000, guid: a78b05b1f3cdc354194a7db6ad553be6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 2eb6b0abee51f24469ff9a319854cffe, type: 3}
+        m_Texture: {fileID: 2800000, guid: d1d26e2512117ce41bc50bec12de525a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -61,11 +61,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ab6971e7f3f975a43ad3b4ff4fb049e9, type: 3}
+        m_Texture: {fileID: 2800000, guid: a78b05b1f3cdc354194a7db6ad553be6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: a8908216ed21294429682e6fcbfcaa24, type: 3}
+        m_Texture: {fileID: 2800000, guid: 30f6b0a70d91f204490cab0fe3f77fc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:

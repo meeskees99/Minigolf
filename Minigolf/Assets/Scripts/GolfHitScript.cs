@@ -125,8 +125,9 @@ public class GolfHitScript : MonoBehaviour
             clubSpeed = Vector3.Distance(oldClubPosition, clubCollider.transform.position) * clubForce;
             oldClubPosition = clubCollider.transform.position;
             dist = Vector3.Distance(instantiatedGolfBall.transform.position, clubCollider.transform.position);
-            if (dist < 0.3 && clubSpeed > 70 || dist < 0.08 && clubSpeed < 70 || dist < 0.03f && clubSpeed < 1 && clubSpeed < 600)
+            if (dist < 0.3 && clubSpeed > 70 || dist < 0.08 && clubSpeed < 70 || dist < 0.03f && clubSpeed < 1 && clubSpeed < 600 && clubSpeed > 10)
             {
+                instantiatedGolfBall.transform.GetComponent<Rigidbody>().isKinematic = false;
                 Vector3 direction = (clubCollider.transform.position - instantiatedGolfBall.transform.position).normalized;
                 instantiatedGolfBall.transform.GetComponent<Rigidbody>().AddForce(-direction * clubSpeed);
                 ballHitCounter++;

@@ -19,7 +19,6 @@ public class BallManager : MonoBehaviour
     private RaycastHit hit;
     public GameObject raycastCube;
     public bool ballRolling;
-    public float mushroomBounceSpeed;
     private bool insideLog;
     private bool insideObstacle;
     [SerializeField] AudioSource rollAudio;
@@ -112,16 +111,10 @@ public class BallManager : MonoBehaviour
             club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().dimmedImages = dimmedImages;
             club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().dimSpeed = dimSpeed;
             club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().loadTime = loadTime;
+            club.GetComponent<GolfHitScript>().playerscript.ball = ballRespawn;
             //Destroy(gameObject);
             Destroy(gameObject);
             //respawn
-        }
-
-        if(collision.gameObject.tag == "Mushroom")
-        {
-            var direction = (transform.position - collision.transform.position).normalized;
-            transform.GetComponent<Rigidbody>().AddForce(raycastCube.transform.up * mushroomBounceSpeed);
-            //tegen mushroom met bounce
         }
 
         if (collision.gameObject.tag == "flag")

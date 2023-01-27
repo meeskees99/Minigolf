@@ -1895,6 +1895,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 292860431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &340573342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4742757820445698893, guid: 5352bd7ffb3914c439518fcc314eb82e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6105184543370547907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &340774484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8341,10 +8347,13 @@ MonoBehaviour:
   lookingForBall: 0
   compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  mainScene: {fileID: 5906463758249558298, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   raycastGlow: {fileID: 0}
   interactableObjects: []
   hitsPaper: {fileID: 1189693808}
   hitsDisplay: {fileID: 1189693807}
+  club: {fileID: 340573342}
 --- !u!1 &1517928578
 GameObject:
   m_ObjectHideFlags: 0

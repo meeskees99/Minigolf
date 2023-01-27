@@ -17053,6 +17053,8 @@ MonoBehaviour:
   lookingForBall: 0
   compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  mainScene: {fileID: 5906463758249558298, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   raycastGlow: {fileID: 0}
   interactableObjects:
   - {fileID: 6247650650340037589}
@@ -17060,6 +17062,7 @@ MonoBehaviour:
   hitsPaper: {fileID: 8054126623028871664, guid: 4e4740a5ad16f354dbae6bb8dfab31ea,
     type: 3}
   hitsDisplay: {fileID: 0}
+  club: {fileID: 0}
 --- !u!4 &1812139745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,

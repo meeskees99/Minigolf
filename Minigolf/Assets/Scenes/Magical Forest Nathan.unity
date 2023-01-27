@@ -715,7 +715,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1580438430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeb4885fe73fbc84c98a258eb244d5da, type: 3}
 --- !u!1001 &38977747
@@ -3223,7 +3223,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1580438430}
     - target: {fileID: 33111703320774634, guid: 800e8e1ac29e7ff43a2d4d19ccb03d7f,
         type: 3}
       propertyPath: m_Name
@@ -9643,7 +9643,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fb3a08e8e8ccccd42b9726268f4b03f7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -18345,6 +18345,12 @@ PrefabInstance:
 --- !u!4 &1580438429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9014170783809206335, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1580438428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1580438430 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 9014170783809206330, guid: 895f6f3c2d334633b5800312285058d2,
     type: 3}
   m_PrefabInstance: {fileID: 1580438428}
   m_PrefabAsset: {fileID: 0}

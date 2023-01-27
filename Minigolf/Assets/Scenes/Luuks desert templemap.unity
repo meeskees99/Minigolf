@@ -2290,6 +2290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Putter
       objectReference: {fileID: 0}
+    - target: {fileID: 4742757820445698893, guid: 5352bd7ffb3914c439518fcc314eb82e,
+        type: 3}
+      propertyPath: m_TagString
+      value: hardHit
+      objectReference: {fileID: 0}
     - target: {fileID: 5375742904691028471, guid: 5352bd7ffb3914c439518fcc314eb82e,
         type: 3}
       propertyPath: m_RootOrder

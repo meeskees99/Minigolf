@@ -53,6 +53,7 @@ public class PlayerScript : MonoBehaviour
             Instantiate(hardMatFootstepsFX[randomizer], currentPos  - heightOffset, Quaternion.Euler(footstepRotation));
         }
 
+        ball = club.GetComponent<GolfHitScript>().instantiatedGolfBall;
         //compass points to the ball
         compass.SetActive(lookingForBall);
         hitsPaper.SetActive(!lookingForBall);

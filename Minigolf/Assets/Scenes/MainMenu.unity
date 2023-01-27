@@ -4630,6 +4630,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.36144
       objectReference: {fileID: 0}
+    - target: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
 --- !u!1 &1631438666 stripped
@@ -4673,8 +4678,10 @@ MonoBehaviour:
   compass: {fileID: 1577103210}
   ball: {fileID: 56495237}
   lookingForBall: 0
-  compasActionReference: {fileID: 0}
-  mainScene: {fileID: 0}
+  compasActionReference: {fileID: -4737785700939895144, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  mainScene: {fileID: 5906463758249558298, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   raycastGlow: {fileID: 0}
   interactableObjects: []
   hitsPaper: {fileID: 1398120574}

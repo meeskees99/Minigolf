@@ -12434,6 +12434,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5352bd7ffb3914c439518fcc314eb82e, type: 3}
+--- !u!1 &1360342609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4742757820445698893, guid: 5352bd7ffb3914c439518fcc314eb82e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1360342608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1403084188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17062,7 +17068,7 @@ MonoBehaviour:
   hitsPaper: {fileID: 8054126623028871664, guid: 4e4740a5ad16f354dbae6bb8dfab31ea,
     type: 3}
   hitsDisplay: {fileID: 0}
-  club: {fileID: 0}
+  club: {fileID: 1360342609}
 --- !u!4 &1812139745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,

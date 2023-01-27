@@ -3308,6 +3308,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 069bce5a5d6581e4bb12758fab7af778, type: 3}
   - {fileID: 21300000, guid: d18438140e2b6304995af5bc4dccdc4b, type: 3}
   - {fileID: 21300000, guid: 2234a092b8534d64e95a080441c6d626, type: 3}
+  - {fileID: 21300000, guid: ad8c811adaef88f4abdc2b07a113d237, type: 3}
   previewImage: {fileID: 1600800137}
   levelScenes:
   - 
@@ -3318,6 +3319,7 @@ MonoBehaviour:
   - Tutorial
   - Magical forest
   - Freezing Glacier
+  - Skylands
   dimmedImages:
   - {fileID: 1741260831}
   - {fileID: 1970990466}
@@ -4442,6 +4444,9 @@ MonoBehaviour:
   lookingForBall: 0
   compasActionReference: {fileID: 0}
   raycastGlow: {fileID: 0}
+  interactableObjects: []
+  hitsPaper: {fileID: 0}
+  hitsDisplay: {fileID: 0}
 --- !u!114 &1631438670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5736,6 +5741,7 @@ MonoBehaviour:
   - Luuks desert templemap
   - Magical Forest Nathan
   - Luuks Sneeuwmap
+  - Sky Islands Nathan
   levelDisplayName: {fileID: 0}
   levelNames: []
   dimmedImages:

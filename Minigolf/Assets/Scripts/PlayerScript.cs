@@ -101,7 +101,6 @@ public class PlayerScript : MonoBehaviour
         if(mainSceneCounter > 4)
         {
             SceneManager.LoadScene("MainMenu");
-            club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().SendLeaderboard(GolfHitScript.ballHitCounter);
             GolfHitScript.ballHitCounter = 0;
         }
     }

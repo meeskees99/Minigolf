@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject ball;
     [SerializeField] bool lookingForBall;
     [SerializeField] InputActionReference compasActionReference;
+    [SerializeField] InputActionReference mainScene;
     [SerializeField] GameObject raycastGlow;
     private RaycastHit checkpointHit;
     private Vector3 checkpoint;
@@ -25,11 +27,14 @@ public class PlayerScript : MonoBehaviour
     [Header("Display amount of hits")]
     [SerializeField] GameObject hitsPaper;
     [SerializeField] TextMeshProUGUI hitsDisplay;
+    private int mainSceneCounter;
+    public GameObject club;
 
     private void Start()
     {
         prevPos = transform.position;
         compasActionReference.action.performed += Compas;
+        mainScene.action.performed += MainScene;
     }
 
     private void Update()
@@ -87,6 +92,17 @@ public class PlayerScript : MonoBehaviour
         else
         {
             lookingForBall = true;
+        }
+    }
+
+    private void MainScene(InputAction.CallbackContext obj)
+    {
+        mainSceneCounter++;
+        if(mainSceneCounter > 4)
+        {
+            SceneManager.LoadScene("MainMenu");
+            club.GetComponent<GolfHitScript>().instantiatedGolfBall.GetComponent<BallManager>().SendLeaderboard(GolfHitScript.ballHitCounter);
+            GolfHitScript.ballHitCounter = 0;
         }
     }
 

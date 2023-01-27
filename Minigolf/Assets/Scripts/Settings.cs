@@ -32,6 +32,6 @@ public class Settings : MonoBehaviour
         AudioListener.volume = Buttons.volume;
 
         //player height
-        camOffset.position = new Vector3(camOffset.position.x, Buttons.playerHeightOffset + 2.7f, camOffset.position.z);
+        //camOffset.position = new Vector3(camOffset.position.x, Buttons.playerHeightOffset + 2.7f, camOffset.position.z);
     }
 }
